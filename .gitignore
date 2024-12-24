@@ -8,3 +8,4 @@
 *.mp3
 /bitrix/
 /local/templates/sgmk/assets/node_modules/
+/upload/

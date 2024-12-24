@@ -1,0 +1,243 @@
+.vacancy-detail {
+  // .vacancy-detail__container
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  // .vacancy-detail__head
+
+  &__head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 45px;
+    @media (max-width: $tablet) {
+      margin-bottom: 39px;
+    }
+    @media (max-width: $mobile) {
+      margin-bottom: 24px;
+    }
+  }
+
+  // .vacancy-detail__title
+
+  &__title {
+  }
+
+  // .vacancy-detail__btn
+
+  &__btn {
+    flex: 0 0 auto;
+    text-align: center;
+    @media (max-width: $tablet) {
+      min-width: 250px;
+    }
+    @media (max-width: $mobile) {
+      display: none;
+    }
+  }
+
+  // .vacancy-detail__tags
+
+  &__tags {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    white-space: nowrap;
+    gap: 8px;
+    margin-bottom: 24px;
+  }
+
+  // .vacancy-detail__tags-active
+
+  &__tags-active {
+    padding: 7px 12px;
+    border-radius: 8px;
+    background: cl(gry-alt);
+    font-size: rem(18);
+    line-height: 1;
+
+    @media (max-width: $tablet) {
+      font-size: rem(15);
+      font-weight: 500;
+      padding: 8px 12px;
+
+      letter-spacing: -0.075px;
+    }
+    @media (max-width: $mobile) {
+      font-size: rem(14);
+      font-weight: 500;
+      letter-spacing: -0.07px;
+      padding: 9px 8px;
+    }
+  }
+
+  // .vacancy-detail__tags-item
+
+  &__tags-item {
+    &:not(:last-child) {
+      margin-right: 16px;
+    }
+    color: cl(gry);
+    font-size: rem(16);
+    line-height: 140%; /* 22.4px */
+    letter-spacing: -0.08px;
+    @media (max-width: $tablet) {
+      font-size: rem(14);
+      letter-spacing: -0.07px;
+    }
+    @media (max-width: $mobile) {
+      font-size: rem(13);
+      letter-spacing: -0.065px;
+    }
+  }
+
+  // .vacancy-detail__rate
+
+  &__rate {
+    margin-bottom: 12px;
+    font-size: rem(23);
+    line-height: 110%; /* 25.3px */
+    letter-spacing: -0.69px;
+    text-transform: uppercase;
+    font-family: $fontSecondary;
+    @media (max-width: $tablet) {
+      font-size: rem(20);
+      letter-spacing: -0.6px;
+    }
+    @media (max-width: $mobile) {
+      font-size: rem(16);
+      letter-spacing: -0.48px;
+      margin-bottom: 8px;
+    }
+  }
+
+  // .vacancy-detail__experience
+
+  &__experience {
+    font-size: rem(16);
+    color: cl(gry);
+    line-height: 140%; /* 22.4px */
+    letter-spacing: -0.08px;
+    @media (max-width: $tablet) {
+      font-size: rem(14);
+      letter-spacing: -0.07px;
+    }
+    @media (max-width: $mobile) {
+      font-size: rem(13);
+      letter-spacing: -0.065px;
+    }
+  }
+
+  // .vacancy-detail__respond
+
+  &__respond {
+    min-width: 322px;
+    text-align: center;
+    max-width: max-content;
+    @media (max-width: $tablet) {
+      margin-left: auto;
+      margin-right: auto;
+      min-width: 250px;
+    }
+    @media (max-width: $mobile) {
+      min-width: 237px;
+    }
+  }
+
+  // .vacancy-detail__content
+
+  &__content {
+    font-size: rem(18);
+    line-height: 140%; /* 22.4px */
+    letter-spacing: -0.09px;
+    margin-top: 51px;
+    max-width: 668px;
+
+    display: flex;
+    flex-direction: column;
+    @media (max-width: $tablet) {
+      margin-top: 43px;
+      max-width: 604px;
+    }
+    @media (max-width: $mobile) {
+      max-width: 100%;
+      font-size: rem(14);
+      letter-spacing: -0.07px;
+      margin-top: 32px;
+    }
+    p {
+      margin-bottom: 32px;
+
+      @media (max-width: $tablet) {
+        margin-bottom: 24px;
+      }
+      @media (max-width: $mobile) {
+        margin-bottom: 20px;
+      }
+    }
+
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      text-transform: uppercase;
+      font-size: rem(23);
+      line-height: 110%; /* 25.3px */
+      letter-spacing: -0.69px;
+      font-family: $fontSecondary;
+      margin-bottom: 32px;
+      @media (max-width: $tablet) {
+        font-size: rem(20);
+        letter-spacing: -0.6px;
+        margin-bottom: 24px;
+      }
+
+      @media (max-width: $mobile) {
+        font-size: rem(16);
+        letter-spacing: -0.48px;
+        margin-bottom: 20px;
+      }
+    }
+    ul {
+      margin-bottom: 40px;
+      @media (max-width: $tablet) {
+        margin-bottom: 44px;
+      }
+      @media (max-width: $mobile) {
+        margin-bottom: 24px;
+      }
+      li {
+        position: relative;
+        display: flex;
+        padding-left: 26px;
+        @media (max-width: $mobile) {
+          padding-left: 20px;
+        }
+
+        &::before {
+          content: "";
+          display: block;
+          --size: 4px;
+          width: var(--size);
+          height: var(--size);
+          border-radius: 50%;
+          background: currentColor;
+          position: absolute;
+          top: 12px;
+          left: 11px;
+          @media (max-width: $mobile) {
+            left: 9px;
+            top: 9px;
+
+            --size: 3px;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,130 @@
+.slider {
+    display: flex; /* Выравнивание элементов в колонку */
+}
+
+.main-image {
+    flex: 1; /* Основная картинка займет всю доступную ширину */
+    max-height: 600px; /* Фиксированная максимальная высота */
+    overflow: hidden; /* Скрыть возможные выходящие за пределы элементы */
+    display: flex;
+    justify-content: center;
+    position: relative; /* Для позиционирования стрелок */
+}
+
+.main-image img {
+    width: auto; /* Адаптивное изображение для основной картинки */
+    height: auto; /* Высота соответствует пропорциям изображения */
+    object-fit: contain; /* Пропорциональное заполнение, без обрезки */
+    transition: opacity 0.3s ease; /* Плавный переход при смене изображений */
+    opacity: 1; /* Начальная непрозрачность */
+}
+
+.arrow {
+    position: absolute; /* Позиционируем стрелки */
+    top: 50%; /* Центрируем по вертикали */
+    transform: translateY(-50%); /* Центрирование */
+    background-color: rgba(255, 255, 255, 0.7); /* Фон стрелок */
+    border: none; /* Убираем стандартное оформление кнопок */
+    padding: 10px; /* Отступы для кнопок */
+    cursor: pointer; /* Указываем, что кнопки кликабельные */
+    z-index: 10; /* Поверх основного изображения */
+}
+
+.left-arrow {
+    left: 10px; /* Сдвиг влево */
+}
+
+.right-arrow {
+    right: 10px; /* Сдвиг вправо */
+}
+
+.thumbnails {
+    display: flex; /* Сетка для миниатюр */
+    overflow-x: auto; /* Включаем горизонтальную прокрутку */
+    padding: 10px 0; /* Отступы сверху и снизу */
+    justify-content: center; /* Выравнивание по центру */
+    max-width: 90%; /* Ограничим ширину контейнера */
+    margin: 0 auto; /* Центрируем контейнер */
+}
+
+/* Стилизация скролл-бара */
+.thumbnails::-webkit-scrollbar {
+    height: 12px; /* Высота скролл-бара */
+}
+
+.thumbnails::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Цвет фона трека скролл-бара */
+    border-radius: 10px; /* Закругление углов трека */
+}
+
+.thumbnails::-webkit-scrollbar-thumb {
+    background: var(--color-main-1); /* Цвет скролл-бара */
+    border-radius: 10px; /* Закругление углов скролл-бара */
+}
+
+.thumbnails img {
+    cursor: pointer; /* Указываем, что изображение можно кликнуть */
+     /* width: 80px; /* Ширина превью на мобильных устройствах */
+    height: 80px; /* Высота превью на мобильных устройствах */
+    object-fit: contain; /* Пропорциональное заполнение, без обрезки для превью */
+    margin-right: 10px; /* Отступ между миниатюрами */
+    transition: transform 0.2s; /* Плавный эффект при наведении */
+}
+
+/* Увеличение миниатюр при наведении */
+.thumbnails img:hover {
+    transform: scale(1.1); /* Увеличение превью при наведении */ 
+}
+
+/* Стиль для модального окна */
+.modal {
+    padding: 10%;
+    display: none; /* Скрыть по умолчанию */
+    position: fixed; /* Открыть над остальной частью страницы */
+    z-index: 1000; /* Поверх всех других элементов */
+    left: 0;
+    top: 0;
+    width: 100%; /* На всю ширину */
+    height: 100%; /* На всю высоту */
+    overflow: auto; /* Скрыть лишнее */
+    background-color: rgba(0, 0, 0, 0.8); /* Полупрозрачный фон */
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    max-width: 100%; /* Максимальная ширина для изображения */
+    max-height: 100%; /* Максимальная высота для изображения */
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Медиазапросы для мобильных устройств */
+@media (max-width: 768px) {
+    .thumbnails {
+        max-width: 100%; /* Ширина контейнера на маленьких экранах */
+    }
+
+    .thumbnails img {
+        width: 60px; /* Уменьшение размера миниатюр на мобильных устройствах */
+        height: 60px; /* Уменьшение размера миниатюр на мобильных устройствах */
+    }
+
+    .arrow {
+        padding: 8px; /* Уменьшение размера стрелок на мобильных устройствах */
+    }
+}
+
+@media (max-width: 768px) {
+    .thumbnails::-webkit-scrollbar {
+        height: 6px;
+    }
+}

@@ -1,0 +1,229 @@
+.search-result {
+  // .search-result__container
+
+  &__container {
+  }
+
+  // .search-result__inner
+
+  &__inner {
+    width: 1014px;
+    max-width: 100%;
+  }
+
+  // .search-result__title
+
+  &__title {
+    margin-bottom: 44px;
+    @media (max-width: $tablet) {
+      margin-bottom: 36px;
+    }
+    @media (max-width: $mobile) {
+      margin-bottom: 24px;
+    }
+  }
+
+  // .search-result__form
+
+  &__form {
+    margin-bottom: 53px;
+    @media (max-width: $tablet) {
+      margin-bottom: 42px;
+    }
+    @media (max-width: $mobile) {
+      margin-bottom: 32px;
+    }
+  }
+
+  // .search-result__head
+
+  &__head {
+    display: flex;
+    position: relative;
+    border: 1px solid cl(gry);
+    border-radius: 2px;
+
+    &::before {
+      content: "";
+      --size: 15px;
+      position: absolute;
+      width: var(--size);
+      height: var(--size);
+      background: var(--icon) center center/contain no-repeat;
+
+      top: 50%;
+      left: 12px;
+      transform: translate(0, -50%);
+      @media (max-width: $mobile) {
+        --size: 10px;
+      }
+    }
+    .input {
+      flex: 1 1 auto;
+      padding: 11px 0px 11px 40px;
+      font-size: rem(16);
+      line-height: 140%; /* 22.4px */
+      height: 44px;
+      border: none;
+      letter-spacing: -0.08px;
+      @media (max-width: $tablet) {
+        font-size: rem(14);
+        letter-spacing: -0.07px;
+        padding-left: 40px;
+      }
+      @media (max-width: $mobile) {
+        font-size: rem(13);
+        letter-spacing: -0.065px;
+        padding-left: 32px;
+      }
+    }
+  }
+
+  // .search-result__reset
+
+  &__reset {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    align-self: center;
+    margin-right: 12px;
+    margin-left: calc(var(--size) * -1);
+    --size: 24px;
+    width: var(--size);
+    height: var(--size);
+    background: cl(whte);
+    &::before,
+    &::after {
+      content: "";
+      width: 14px;
+      height: 1px;
+      background: cl(alt);
+      position: absolute;
+    }
+    &::before {
+      transform: rotate(45deg);
+    }
+    &::after {
+      transform: rotate(-45deg);
+    }
+  }
+
+  // .search-result__send
+
+  &__send {
+    padding: 0px 12px;
+    font-size: rem(15);
+    font-weight: 500;
+    border-left: 1px solid cl(gry);
+    letter-spacing: -0.075px;
+    line-height: 100%; /* 14px */
+    color: cl(alt);
+    @media (max-width: $mobile) {
+      font-size: rem(14);
+      letter-spacing: -0.07px;
+    }
+  }
+
+  // .search-result__quiantity
+
+  &__quiantity {
+    padding-left: 12px;
+    margin-top: 8px;
+    font-size: rem(16);
+    line-height: 140%; /* 22.4px */
+    letter-spacing: -0.08px;
+    color: cl(text);
+    @media (max-width: $tablet) {
+      font-size: rem(14);
+      letter-spacing: -0.07px;
+    }
+    @media (max-width: $mobile) {
+      font-size: rem(13);
+      letter-spacing: -0.065px;
+    }
+  }
+
+  // .search-result__item
+
+  &__item {
+  }
+
+  // .search-result__pagging
+
+  &__pagging {
+    margin-top: 40px;
+  }
+}
+
+.input {
+}
+.result-search {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  @media (min-width: $xl) {
+    padding-right: 40px;
+  }
+  &:not(:last-of-type) {
+    margin-bottom: 32px;
+
+    @media (max-width: $mobile) {
+      margin-bottom: 24px;
+    }
+  }
+  @media (max-width: $mobile) {
+    gap: 12px;
+  }
+  // .result-search__name
+
+  &__name {
+    text-transform: uppercase;
+    line-height: 110%; /* 17.6px */
+    letter-spacing: -0.69px;
+    font-size: rem(23);
+    font-family: $fontSecondary;
+    color: cl(gry);
+    span {
+      color: cl(alt);
+    }
+    @media (max-width: $tablet) {
+      font-size: rem(20);
+      letter-spacing: -0.6px;
+    }
+
+    @media (max-width: $mobile) {
+      font-size: rem(16);
+      letter-spacing: -0.48px;
+    }
+  }
+
+  // .result-search__content
+
+  &__content {
+    font-size: rem(18);
+    line-height: 140%; /* 25.2px */
+    letter-spacing: -0.09px;
+    @media (max-width: $mobile) {
+      font-size: rem(14);
+      letter-spacing: -0.07px;
+    }
+  }
+
+  // .result-search__link
+
+  &__link {
+    color: cl(gry);
+    font-size: rem(16);
+    line-height: 140%; /* 22.4px */
+    letter-spacing: -0.08px;
+    @media (max-width: $tablet) {
+      font-size: rem(14);
+      letter-spacing: -0.07px;
+    }
+    @media (max-width: $mobile) {
+      font-size: rem(13);
+      letter-spacing: -0.065px;
+    }
+  }
+}

@@ -1,0 +1,311 @@
+.ecology {
+  padding-bottom: rem(111);
+
+  @media (max-width: $tablet) {
+    padding-bottom: rem(80);
+  }
+  // .ecology__container
+
+  &__container {
+    .ecology__slider {
+      @media (max-width: em(1300)) {
+        overflow: visible;
+      }
+    }
+  }
+
+  // .ecology__top
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    gap: rem(30);
+    margin-bottom: rem(56);
+
+    @media (min-width: $tablet) {
+      padding-right: rem(15);
+    }
+
+    @media (max-width: $tablet) {
+      gap: rem(44);
+      margin-bottom: rem(44);
+    }
+
+    @media (max-width: $mobile) {
+      gap: rem(34);
+      margin-bottom: rem(32);
+    }
+  }
+
+  // .ecology__title
+
+  &__title {
+  }
+
+  // .ecology__inner
+
+  &__inner {
+    // padding-bottom: rem(5);
+    position: relative;
+
+    @media (min-width: $tablet) {
+      padding-bottom: rem(5);
+    }
+
+    max-width: max-content;
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: rem(1);
+      background: #e8e8ea;
+
+      @media (max-width: $mobile) {
+        // width: calc(100% - rem(32));
+        // left: rem(16);
+      }
+    }
+  }
+  // .ecology__list
+
+  &__list {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: rem(32);
+    // padding-bottom: rem(5);
+    position: relative;
+
+    // &::before {
+    //   content: "";
+    //   position: absolute;
+    //   bottom: 0;
+    //   left: 0;
+    //   width: 100%;
+    //   height: rem(1);
+    //   background: cl(gry);
+
+    //   @media (max-width: $tablet) {
+    //     left: rem(16);
+    //     width: calc(100% - rem(32));
+    //   }
+
+    //   @media (max-width: $mobileSmall) {
+    //     left: rem(20);
+    //     width: calc(100% - rem(20));
+    //   }
+    // }
+
+    @extend %hidescroll;
+    @media (max-width: $tablet) {
+      gap: rem(24);
+      flex-wrap: nowrap;
+      width: 100vw;
+      overflow: auto;
+
+      margin: rem(0) rem(-16);
+      padding: rem(0) rem(16) rem(5);
+    }
+
+    @media (max-width: $mobile) {
+      margin: rem(0) rem(-20);
+      padding: rem(0) rem(20) rem(5);
+      gap: rem(13);
+    }
+  }
+
+  // .ecology__link
+
+  &__link {
+    font-size: rem(18);
+    line-height: normal;
+    color: cl(gry);
+
+    position: relative;
+
+    transition: all $time $tr 0s;
+
+    @media (max-width: $tablet) {
+      letter-spacing: -0.09px;
+      white-space: nowrap;
+    }
+
+    @media (max-width: $mobile) {
+      font-size: rem(14);
+      line-height: 140%; /* 19.6px */
+      letter-spacing: -0.07px;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: rem(-5);
+      left: 0;
+      background: transparent;
+      width: 100%;
+      height: rem(1);
+
+      transition: all $time $tr 0s;
+    }
+
+    @media (any-hover: hover) {
+      &:hover {
+        color: cl(text);
+      }
+    }
+    &._active {
+      color: cl(text);
+
+      &::before {
+        content: "";
+        background: cl(text);
+      }
+    }
+
+    &._tab-active {
+      color: cl(text);
+
+      &::before {
+        content: "";
+        background: cl(text);
+      }
+    }
+  }
+
+  // .ecology__slider
+
+  &__slider {
+  }
+
+  // .ecology__swiper
+
+  &__swiper {
+    @media (min-width: $mobile) {
+      margin-bottom: rem(44);
+    }
+  }
+
+  // .ecology__slide
+
+  &__slide {
+    width: rem(437);
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    gap: rem(30);
+
+    @media (max-width: $tablet) {
+      width: rem(480);
+      gap: rem(32);
+    }
+
+    @media (max-width: $mobile) {
+      width: rem(300);
+      gap: rem(22);
+    }
+  }
+
+  // .ecology__slide-content
+
+  &__slide-content {
+    flex: 1 1 auto;
+
+    display: flex;
+    flex-direction: column;
+    gap: rem(32);
+
+    @media (max-width: $tablet) {
+      gap: rem(22);
+    }
+
+    @media (max-width: $mobile) {
+      gap: rem(20);
+    }
+  }
+
+  // .ecology__slide-title
+
+  &__slide-title {
+    font-family: $fontSecondary;
+    font-size: rem(32);
+    line-height: 110%; /* 35.2px */
+    letter-spacing: -1.2px;
+    text-transform: uppercase;
+
+    @media (max-width: $tablet) {
+      font-size: rem(28);
+      line-height: 130%; /* 36.4px */
+      letter-spacing: -0.84px;
+    }
+
+    @media (max-width: $mobile) {
+      font-size: rem(18);
+      letter-spacing: -0.54px;
+    }
+  }
+
+  // .ecology__slide-text
+
+  &__slide-text {
+    font-size: rem(18);
+    line-height: 140%; /* 25.2px */
+    letter-spacing: -0.09px;
+
+    @media (max-width: $mobile) {
+      font-size: rem(14);
+      line-height: 140%; /* 19.6px */
+      letter-spacing: -0.07px;
+    }
+  }
+
+  // .ecology__slide-img
+
+  &__slide-img {
+    img,
+    picture {
+      width: 100%;
+      height: rem(300);
+      max-width: 100%;
+      max-height: 100%;
+
+      object-fit: cover;
+
+      @media (max-width: $tablet) {
+        height: rem(250);
+      }
+
+      @media (max-width: $mobile) {
+        height: rem(200);
+      }
+    }
+  }
+
+  // .ecology__arrows
+
+  &__arrows {
+    justify-content: flex-end;
+
+    @media (max-width: $mobile) {
+      display: none;
+    }
+  }
+
+  // .ecology__arrow
+
+  &__arrow {
+  }
+
+  // .ecology__arrow--prev
+
+  &__arrow--prev {
+  }
+
+  // .ecology__arrow--next
+
+  &__arrow--next {
+  }
+}

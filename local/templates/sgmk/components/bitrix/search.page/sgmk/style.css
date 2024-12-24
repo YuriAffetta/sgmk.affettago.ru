@@ -1,0 +1,5 @@
+
+.search-results--item b {
+    color: var(--orange-90,#f05e25);
+    font-weight: normal;
+}

@@ -1,0 +1,158 @@
+.news-detail {
+	// .news-detail__container
+	
+	&__container {
+	}
+	
+	// .news-detail__title
+	
+	&__title {
+		max-width: 899px;
+		color: cl(alt);
+		font-family: $fontSecondary;
+		font-size: rem(23);
+		line-height: 110%; /* 25.3px */
+		letter-spacing: -0.69px;
+		text-transform: uppercase;
+		margin-bottom: 16px;
+		
+		@media (max-width: $tablet) {
+			max-width: 100%;
+			font-size: rem(20);
+			letter-spacing: -0.6px;
+			padding-right: 80px;
+			margin-bottom: 29px;
+			
+			br {
+				display: none;
+			}
+		}
+		
+		@media (max-width: $mobile) {
+			padding-right: 0;
+			margin-bottom: 15px;
+			font-size: rem(16);
+			letter-spacing: -0.48px;
+		}
+	}
+	
+	// .news-detail__date
+	
+	&__date {
+		max-width: 899px;
+		margin-bottom: 56px;
+		font-size: rem(18);
+		line-height: 140%; /* 25.2px */
+		letter-spacing: -0.09px;
+		color: cl(gry);
+		display: block;
+		
+		@media (max-width: $tablet) {
+			max-width: 100%;
+			font-size: rem(14);
+			letter-spacing: -0.07px;
+			margin-bottom: 44px;
+		}
+		
+		@media (max-width: $mobile) {
+			font-size: rem(13);
+			letter-spacing: -0.065px;
+			margin-bottom: 32px;
+		}
+	}
+	
+	// .news-detail__content
+	
+	&__content {
+		max-width: 899px;
+		display: flex;
+		flex-direction: column;
+		gap: 32px;
+		font-size: rem(18);
+		line-height: 140%; /* 25.2px */
+		letter-spacing: -0.09px;
+		
+		@media (max-width: $tablet) {
+			gap: 24px;
+			max-width: 100%;
+		}
+		
+		@media (max-width: $mobile) {
+			gap: 20px;
+			font-size: rem(14);
+			letter-spacing: -0.07px;
+		}
+		
+		h2,
+		h3,
+		h4,
+		h5,
+		h6 {
+			text-transform: uppercase;
+			font-size: rem(23);
+			line-height: 110%; /* 25.3px */
+			letter-spacing: -0.69px;
+			font-family: $fontSecondary;
+			@media (max-width: $tablet) {
+				font-size: rem(20);
+				letter-spacing: -0.6px;
+			}
+			
+			@media (max-width: $mobile) {
+				font-size: rem(16);
+				letter-spacing: -0.48px;
+			}
+		}
+		
+		video {
+			height: 400px;
+			width: 100%;
+			
+			@media (max-width: $mobile) {
+				height: 0;
+				padding-top: 64.02%;
+			}
+		}
+		
+		picture {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			position: relative;
+			height: 400px;
+			
+			@media (max-width: $mobile) {
+				height: 0;
+				padding-top: 64.02%;
+			}
+			
+			img {
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+				top: 0;
+				left: 0;
+			}
+			
+			&::before {
+				content: "";
+				position: absolute;
+				--size: 48px;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				width: var(--size);
+				height: var(--size);
+				background: url("../img/icons/image-placeholder.svg") center center/contain no-repeat;
+			}
+			
+			background: cl(gry-light);
+		}
+		
+		img {
+			max-width: 100%;
+			height: auto;
+		}
+	}
+}

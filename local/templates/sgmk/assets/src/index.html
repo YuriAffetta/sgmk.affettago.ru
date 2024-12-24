@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="ru">
+@@include('html/_head.htm',{ "title":"HomePage" })
+
+<body>
+  <div class="wrapper">
+    @@include('html/_header.htm',{})
+
+    <main class="page">
+      <section class="index-page">
+        <div class="index-page__container">
+          <h1 class="index-page__title" style="margin-bottom: 20px;">Страницы:</h1>
+          <ol style="list-style-position: inside; margin-bottom: 30px;">
+            <li style="margin-bottom: 10px">
+              <a href="home.html">Главная</a>
+            </li>
+            <li style="margin-bottom: 10px">
+              <a href="breeding.html">Направления бизнеса разводящая</a>
+            </li>
+            <li style="margin-bottom: 10px">
+              <a href="catalog.html">Каталог продукции</a>
+            </li>
+            <li style="margin-bottom: 10px">
+              <a href="implementation.html">Реализация транспорта</a>
+            </li>
+            <li style="margin-bottom: 10px">
+              <a href="property.html">Реализация имущества</a>
+            </li>
+            <li style="margin-bottom: 10px">
+              <a href="direction.html">Страница направления</a>
+            </li>
+            <li style="margin-bottom: 10px">
+              <a href="development.html">Устойчивое развитие</a>
+            </li>
+            <li style="margin-bottom: 10px">
+              <a href="provider.html">Поставщикам</a>
+            </li>
+            <li style="margin-bottom: 10px">
+              <a href="company.html">О компании</a>
+            </li>
+            <li style="margin-bottom: 10px">
+              <a href="vacancy.html">Все вакансии</a>
+            </li>
+            <li style="margin-bottom: 10px">
+              <a href="work.html">Работа в СГМК</a>
+            </li>
+            <li style="margin-bottom: 10px">
+              <a href="news.html">Новости</a>
+            </li>
+            <li style="margin-bottom: 10px">
+              <a href="search-result.html">Результат поиска</a>
+            </li>
+            <li style="margin-bottom: 10px">
+              <a href="management.html">Корпоративное управление</a>
+            </li>
+            <li style="margin-bottom: 10px">
+              <a href="contacts.html">Контакты</a>
+            </li>
+            <li style="margin-bottom: 10px">
+              <a href="partners.html">Партнерам</a>
+            </li>
+            <li style="margin-bottom: 10px">
+              <a href="news-detail.html">Новости детальная</a>
+            </li>
+            <li style="margin-bottom: 10px">
+              <a href="vacancy-detail.html">Вакансии детальная</a>
+            </li>
+          </ol>
+          <h2 class="index-page__title " style="margin-bottom: 20px;">Модальные окна</h2>
+          <ol style="list-style-position: inside">
+            <li style="margin-bottom: 10px">
+              <a href="popup-callback.html" data-popup="#callback-modal">Оставить заявку</a>
+            </li>
+            <li style="margin-bottom: 10px">
+              <a href="popup-callback01.html" data-popup="#callback-modal01">Заявка на неликвид</a>
+            </li>
+            <li style="margin-bottom: 10px">
+              <a href="popup-callback02.html" data-popup="#callback-modal02">Форма отклика на ваканссию</a>
+            </li>
+            <li style="margin-bottom: 10px">
+              <a href="popup-callback03.html" data-popup="#callback-modal03">Заявка стать партнером</a>
+            </li>
+          </ol>
+        </div>
+      </section>
+    </main>
+    @@include('html/_footer.htm',{})
+  </div>
+  @@include('html/_js.htm',{})
+</body>
+
+</html>

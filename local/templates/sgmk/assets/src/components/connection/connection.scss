@@ -1,0 +1,123 @@
+.connection {
+  background: rgba(17, 46, 141, 0.05);
+  padding: rem(40) rem(0);
+  margin: rem(63) rem(0) rem(100);
+
+  @media (max-width: $tablet) {
+    margin: rem(51) rem(0) rem(80);
+    padding: rem(32) rem(0);
+  }
+
+  @media (max-width: $mobile) {
+    padding: rem(24) rem(0);
+    margin: rem(40) rem(0) rem(80);
+  }
+
+  &.connection--two {
+    margin-bottom: rem(0);
+
+    @media (max-width: $tablet) {
+      margin-bottom: rem(0);
+    }
+
+    @media (max-width: $mobile) {
+      margin-bottom: rem(0);
+    }
+  }
+  // .connection__container
+
+  &__container {
+  }
+
+  // .connection__content
+
+  &__content {
+    max-width: rem(863);
+    width: 100%;
+    margin: 0 auto;
+
+    @media (min-width: $tablet) {
+      padding-left: rem(98);
+    }
+  }
+
+  // .connection__title
+
+  &__title {
+    font-family: $fontSecondary;
+    font-size: rem(23);
+    line-height: 110%; /* 25.3px */
+    letter-spacing: -0.69px;
+    text-transform: uppercase;
+    margin-bottom: rem(12);
+
+    @media (max-width: $tablet) {
+      font-size: rem(20);
+      line-height: 110%; /* 22px */
+      letter-spacing: -0.6px;
+    }
+
+    @media (max-width: $mobile) {
+      font-size: rem(16);
+      letter-spacing: -0.48px;
+      margin-bottom: rem(13);
+    }
+  }
+
+  // .connection__text
+
+  &__text {
+    font-size: rem(18);
+    line-height: 140%; /* 25.2px */
+    letter-spacing: -0.09px;
+    margin-bottom: rem(44);
+
+    @media (max-width: $tablet) {
+      margin-bottom: rem(24);
+      br {
+        display: none;
+      }
+    }
+
+    @media (max-width: $mobile) {
+      font-size: rem(14);
+      letter-spacing: -0.07px;
+      line-height: 140%; /* 19.6px */
+      margin-bottom: rem(25);
+    }
+  }
+
+  // .connection__list
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: rem(23);
+
+    @media (max-width: $mobile) {
+      gap: rem(11);
+    }
+  }
+
+  // .connection__link
+
+  &__link {
+    font-family: $fontSecondary;
+    font-size: rem(32);
+    line-height: 110%; /* 35.2px */
+    letter-spacing: -0.96px;
+    text-transform: uppercase;
+    color: cl(alt);
+
+    @media (max-width: $tablet) {
+      font-size: rem(28);
+      line-height: 130%; /* 36.4px */
+      letter-spacing: -0.84px;
+    }
+
+    @media (max-width: $mobile) {
+      font-size: rem(18);
+      letter-spacing: -0.54px;
+    }
+  }
+}

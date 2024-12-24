@@ -1,0 +1,32 @@
+// ===============
+// colors palette
+// ===============
+
+$colors: (
+  "alt": #112e8d,
+  "yllow": #f09d20,
+  "dark": #00155c,
+  "gry": #bbbbbf,
+  "gry-dvdider": #e8e8ea,
+  "gry-light": #eeeef0,
+
+  "blue-gray": #606883,
+  "text": #535353,
+  "whte": #fff,
+  "blck": #000,
+  "gry-alt": #f5f5f7,
+);
+
+//========================================================================================================================================================
+
+:root {
+  @if $colors {
+    @each $key, $value in $colors {
+      --color-#{$key}: #{$value};
+      --color-#{$key}--rgb: #{hextorgb($value)};
+    }
+  }
+
+  --font-primary: #{$fontFamily};
+  --font-secondary: #{$fontSecondary};
+}

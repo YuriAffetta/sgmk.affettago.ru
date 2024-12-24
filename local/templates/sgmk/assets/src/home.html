@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/_head.htm',{ "title":"HomePage" })
+
+<body>
+  <div class="wrapper">
+    @@include('html/_header-index.htm',{})
+    <main class="page page--no-indent js-gsap">
+      <section class="hero swiper js-hero js-first ">
+        <div class="hero__swiper swiper-wrapper">
+          <div class="hero__slide swiper-slide">
+            <button type="button" aria-label="Следующий слайд" class="hero__slide-next"></button>
+            <picture class="hero__image">
+              <source media="(max-width: 767px)" srcset="./img/intro/intro-s.webp, ./img/intro/intro-s@2x.webp 2x">
+              <source media="(max-width: 1360px)" srcset="./img/intro/intro-m.webp, ./img/intro/intro-m@2x.webp 2x">
+              <img src="./img/intro/intro.webp" srcset="./img/intro/intro@2x.webp 2x" alt="" style='width: 100%;'>
+            </picture>
+            <picture class="hero__paralax">
+              <img src="./img/intro/01-paralax.webp" srcset="./img/intro/01-paralax@2x.webp 2x" alt="">
+            </picture>
+            <div class="hero__container">
+              <div class="hero__left">
+                <h1 class="hero__title">
+                  <span>инновации </span><br>и развитие в горно– <br>металлургической <br>отрасли
+                </h1>
+              </div>
+              <div class="hero__right">
+                <div class="hero__info">Решаем вопросы сырьевой безопасности — обеспечиваем сырьем крупнейшие
+                  предприятия Кузбасса и России</div>
+                <a href="javascript:void(0);" class="btn btn--whte hero__btn">Перейти в каталог</a>
+              </div>
+            </div>
+          </div>
+          <div class="hero__slide swiper-slide">
+            <button type="button" aria-label="Следующий слайд" class="hero__slide-next"></button>
+
+            <picture class="hero__image">
+              <source media="(max-width: 767px)" srcset="./img/intro/intro2-s@2x.webp 2x">
+              <source media="(max-width: 1360px)" srcset="./img/intro/intro2-m.webp, ./img/intro/intro2-m@2x.webp 2x">
+              <img src="./img/intro/intro2.webp" srcset="./img/intro/intro2@2x.webp 2x" alt="" style='width: 100%;'>
+            </picture>
+            <div class="hero__container">
+              <div class="hero__left">
+                <h2 class="hero__title">
+                  <span>Интеграция </span><br>Бизнеса <br> человека <br> и природы
+                </h2>
+              </div>
+              <div class="hero__right">
+                <div class="hero__info">Мы стремимся сделать мир вокруг себя лучше через нашу деятельность: сохраняем
+                  ресурсы и даём уверенность</div>
+                <a href="javascript:void(0);" class="btn btn--whte hero__btn">Устойчивое развитие</a>
+              </div>
+            </div>
+          </div>
+          <div class="hero__slide swiper-slide">
+            <button type="button" aria-label="Следующий слайд" class="hero__slide-next"></button>
+
+            <picture class="hero__image">
+              <source media="(max-width: 767px)" srcset="./img/intro/intro3-s.webp, ./img/intro/intro3-s@2x.webp 2x">
+              <source media="(max-width: 1360px)" srcset="./img/intro/intro3-m.webp, ./img/intro/intro3-m@2x.webp 2x">
+              <img src="./img/intro/intro3.webp" srcset="./img/intro/intro3@2x.webp 2x" alt="" style='width: 100%;'>
+            </picture>
+            <div class="hero__container">
+              <div class="hero__left">
+                <h2 class="hero__title">
+                  <span>СГМК — <br> Это люди</span>
+                </h2>
+                <div class="hero__info">Профессионализм и высокая экспертиза сотрудников — двигатель роста и
+                  трансформации компании</div>
+                <a href="javascript:void(0);" class="btn btn--whte hero__btn">Смотреть вакансии</a>
+              </div>
+            </div>
+          </div>
+          <div class="hero__slide swiper-slide">
+            <button type="button" aria-label="Следующий слайд" class="hero__slide-next"></button>
+
+            <picture class="hero__image">
+              <source media="(max-width: 767px)" srcset="./img/intro/intro4-s.webp, ./img/intro/intro4-s@2x.webp 2x">
+              <source media="(max-width: 1360px)" srcset="./img/intro/intro4-m.webp, ./img/intro/intro4-m@2x.webp 2x">
+              <img src="./img/intro/intro4.webp" srcset="./img/intro/intro4@2x.webp 2x" alt="" style='width: 100%;'>
+            </picture>
+            <div class="hero__container">
+              <div class="hero__left">
+                <h2 class="hero__title">
+                  <span>экологичная </span><br>бизнес-среда <br> с открытым партнерством
+                </h2>
+              </div>
+              <div class="hero__right">
+                <div class="hero__info">Мы стремимся сделать мир вокруг себя лучше через нашу деятельность: сохраняем
+                  ресурсы и даём уверенность</div>
+                <a href="javascript:void(0);" class="btn btn--whte hero__btn">Устойчивое развитие</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div class="hero__container hero__pag-container">
+          <div class="hero__pag"></div>
+
+        </div>
+      </section>
+      <section class="decide js-overlap-section js-area">
+        <div class='decide__container'>
+          <h2 class="decide__title _title"><span>С 2006 года</span>решаем вопросы сырьевой <br> безопасности России
+          </h2>
+          <div class="decide__inner">
+            <div class="decide__content">
+
+              <div class="decide__column-text">
+                <p>
+                  17 лет компания СГМК вносит масштабный вклад в экономику, экологию и социальную сферу регионов
+                  присутствия.
+                </p>
+
+                <p>
+                  Мы являемся надежным поставщиком металлолома на металлургические предприятия Сибири и Урала,
+                  добываем доломит и производим щебень.
+                </p>
+              </div>
+
+              <a href="javascript:void(0);" class="decide__column-link btn">Подробнее о компании</a>
+
+            </div>
+            <div class="decide__image">
+              <picture>
+                <source media="(max-width: 767px)" srcset="./img/decide/01-s.webp, ./img/decide/01-s@2x.webp 2x">
+                <source media="(max-width: 992px)" srcset="./img/decide/01-m.webp, ./img/decide/01-m@2x.webp 2x">
+                <img src="./img/decide/01.webp" srcset="./img/decide/01@2x.webp 2x" alt="" style='width: 100%;'>
+              </picture>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="today js-area">
+        <div class='today__container'>
+          <h2 class="today__title _title"> <span>СГМК</span> Сегодня</h2>
+          <div class="today__inner">
+            <div class="today__slider swiper js-slider-today">
+              <div class="today__swiper swiper-wrapper">
+                <a href="javascript:void(0);" class="today__slide swiper-slide">
+                  <div class="today__slide-img">
+                    <picture>
+                      <source media="(max-width: 767px)" srcset="./img/today/01-s@x2.webp 2x">
+                      <source media="(max-width: 1360px)" srcset="./img/today/01-m.webp, ./img/today/01-m@x2.webp 2x">
+                      <img src="./img/today/01.webp" srcset="./img/today/01@x2.webp 2x" alt="">
+                    </picture>
+                  </div>
+                  <time class="today__slide-date" datetime="2016-11-18T09:54">16 июля, 2023</time>
+                  <div class="today__slide-text">
+                    В честь Дня металлурга в СГМК прошёл семейный open air
+                  </div>
+                </a>
+                <a href="javascript:void(0);" class="today__slide swiper-slide">
+                  <div class="today__slide-img">
+                    <picture>
+                      <source media="(max-width: 767px)" srcset="./img/today/02-s@x2.webp 2x">
+                      <source media="(max-width: 1360px)" srcset="./img/today/02-m.webp, ./img/today/02-m@x2.webp 2x">
+                      <img src="./img/today/01.webp" srcset="./img/today/02@x2.webp 2x" alt="">
+                    </picture>
+                  </div>
+                  <time class="today__slide-date" datetime="2016-11-18T09:54">25 июля, 2023</time>
+                  <div class="today__slide-text">
+                    Депутаты Новокузнецкого горсовета, общественники, экологи побывали <br> на ЗСЭМЗ
+                  </div>
+                </a>
+                <a href="javascript:void(0);" class="today__slide swiper-slide">
+                  <div class="today__slide-img">
+                    <picture>
+                      <source media="(max-width: 767px)" srcset="./img/today/02-s@x2.webp 2x">
+                      <source media="(max-width: 1360px)" srcset="./img/today/02-m.webp, ./img/today/02-m@x2.webp 2x">
+                      <img src="./img/today/01.webp" srcset="./img/today/03@x2.webp 2x" alt="">
+                    </picture>
+                  </div>
+                  <time class="today__slide-date" datetime="2016-11-18T09:54">2 августа, 2023</time>
+                  <div class="today__slide-text">
+                    В честь Дня металлурга более <br> 70 лучших работников предприятий СГМК удостоены наград
+                  </div>
+                </a>
+                <a href="javascript:void(0);" class="today__slide swiper-slide">
+                  <div class="today__slide-img">
+                    <picture>
+                      <source media="(max-width: 767px)" srcset="./img/today/01-s@x2.webp 2x">
+                      <source media="(max-width: 1360px)" srcset="./img/today/01-m.webp, ./img/today/01-m@x2.webp 2x">
+                      <img src="./img/today/01.webp" srcset="./img/today/01@x2.webp 2x" alt="">
+                    </picture>
+                  </div>
+                  <time class="today__slide-date" datetime="2016-11-18T09:54">16 июля, 2023</time>
+                  <div class="today__slide-text">
+                    В честь Дня металлурга в СГМК прошёл семейный open air
+                  </div>
+                </a>
+                <a href="javascript:void(0);" class="today__slide swiper-slide">
+                  <div class="today__slide-img">
+                    <picture>
+                      <source media="(max-width: 767px)" srcset="./img/today/02-s@x2.webp 2x">
+                      <source media="(max-width: 1360px)" srcset="./img/today/02-m.webp, ./img/today/02-m@x2.webp 2x">
+                      <img src="./img/today/01.webp" srcset="./img/today/02@x2.webp 2x" alt="">
+                    </picture>
+                  </div>
+                  <time class="today__slide-date" datetime="2016-11-18T09:54">25 июля, 2023</time>
+                  <div class="today__slide-text">
+                    Депутаты Новокузнецкого горсовета, общественники, экологи побывали на ЗСЭМЗ
+                  </div>
+                </a>
+                <a href="javascript:void(0);" class="today__slide swiper-slide">
+                  <div class="today__slide-img">
+                    <picture>
+                      <source media="(max-width: 767px)" srcset="./img/today/02-s@x2.webp 2x">
+                      <source media="(max-width: 1360px)" srcset="./img/today/02-m.webp, ./img/today/02-m@x2.webp 2x">
+                      <img src="./img/today/01.webp" srcset="./img/today/03@x2.webp 2x" alt="">
+                    </picture>
+                  </div>
+                  <time class="today__slide-date" datetime="2016-11-18T09:54">2 августа, 2023</time>
+                  <div class="today__slide-text">
+                    В честь Дня металлурга более 70 лучших работников предприятий СГМК удостоены наград
+                  </div>
+                </a>
+              </div>
+              <div class="today__arrows swiper__arrows">
+                <button type="button" class="today__arrow today__arrow--prev swiper__arrow swiper__arrow--prev"
+                  style='--icon:url("../img/icons/01.svg")'></button>
+                <button type="button" class="today__arrow today__arrow--next swiper__arrow swiper__arrow--next"
+                  style='--icon:url("../img/icons/02.svg")'></button>
+              </div>
+            </div>
+            <a href="javascript:void(0);" class="today__link btn">Читать все новости</a>
+          </div>
+        </div>
+      </section>
+      <section class="produce js-produce ">
+        <div class='produce__container'>
+          <div class="produce__top js-produce-head">
+            <h2 class="produce__title _title">
+              <span>Поставляем сырье,</span>
+              добываем доломит, <br> производим щебень <br> и не только
+            </h2>
+            <a href="javascript:void(0);" class="produce__link btn">Все активы компании</a>
+          </div>
+          <div class="produce__row">
+            <div class="produce__column js-produce-column">
+              <div class="produce__column-content">
+                <h3 class="produce__column-title">Производство <br> ферросицилия</h3>
+                <div class="produce__column-text">
+                  Единственный в России производитель особо чистых премиальных видов ферросилиция. Предприятие
+                  в контуре всех принципов ESG повестки, использует технологии опережающего развития
+                </div>
+                <a href="javascript:void(0);" class="produce__column-link btn">Узнать подробнее</a>
+              </div>
+              <div class="produce__column-image">
+                <picture>
+                  <source media="(max-width: 767px)" srcset="./img/produce/01-s.webp, ./img/produce/01-s@2x.webp 2x">
+                  <source media="(max-width: 1360px)" srcset="./img/produce/01-m.webp, ./img/produce/01-m@2x.webp 2x">
+                  <img src="./img/produce/01.webp" srcset="./img/produce/01@2x.webp 2x" alt="">
+                </picture>
+              </div>
+            </div>
+            <div class="produce__column js-produce-column">
+              <div class="produce__column-content">
+                <h3 class="produce__column-title">Производство <br> вторичного алюминия</h3>
+                <div class="produce__column-text">
+                  Производство оснащено современным оборудованием и выпускает только качественные сплавы, отвечающие
+                  международным стандартам
+                </div>
+                <a href="javascript:void(0);" class="produce__column-link btn">Узнать подробнее</a>
+              </div>
+              <div class="produce__column-image">
+                <picture>
+                  <source media="(max-width: 767px)" srcset="./img/produce/02-s.webp, ./img/produce/02-s@2x.webp 2x">
+                  <source media="(max-width: 1360px)" srcset="./img/produce/02-m.webp, ./img/produce/02-m@2x.webp 2x">
+                  <img src="./img/produce/02.webp" srcset="./img/produce/02@2x.webp 2x" alt="">
+                </picture>
+              </div>
+            </div>
+            <div class="produce__column js-produce-column">
+              <div class="produce__column-content">
+                <h3 class="produce__column-title">Переработка <br> крупногабаритных шин</h3>
+                <div class="produce__column-text">
+                  Объём переработки КГШ — 16 тыс.тн/год <br>Завод запущен в 2023 году
+                </div>
+                <a href="javascript:void(0);" class="produce__column-link btn">Узнать подробнее</a>
+              </div>
+              <div class="produce__column-image">
+                <picture>
+                  <source media="(max-width: 767px)" srcset="./img/produce/03-s@2x.webp, ./img/produce/03-s@2x.webp 2x">
+                  <source media="(max-width: 1360px)" srcset="./img/produce/03-m.webp, ./img/produce/03-m@2x.webp 2x">
+                  <img src="./img/produce/03.webp" srcset="./img/produce/03@2x.webp 2x" alt="">
+                </picture>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="partners js-area">
+        <div class='partners__container'>
+          <div class="partners__top">
+            <h2 class="partners__title _title">
+              <span>Ищем партнёров</span>
+              по различным <br> направлениям
+            </h2>
+            <div class="partners__info">
+              <div class="partners__info-text">
+                СГМК открыта к взаимовыгодному сотрудничеству и ищет партнёров в различных направлениях.
+                Мы заинтересованы в партнёрствах с компаниями, специализирующимися на обработке металлолома, <br> добыче
+                сырьевых ресурсов и производстве строительных материалов.
+              </div>
+              <a href="javascript:void(0);" class="partners__info-link btn">Узнать подробнее</a>
+            </div>
+          </div>
+          <div class="partners__inner">
+            <div class="partners__slider swiper js-slider-partners">
+              <div class="partners__swiper swiper-wrapper">
+                <div class="partners__slide swiper-slide">
+                  <div class="partners__slide-img">
+                    <picture>
+                      <source media="(max-width: 767px)" srcset="./img/partners/01-s@2x.webp 2x">
+                      <source media="(max-width: 992px)"
+                        srcset="./img/partners/01-m.webp, ./img/partners/01-m@2x.webp 2x">
+                      <img src="./img/partners/01.webp" srcset="./img/partners/01@2x.webp 2x" alt="">
+                    </picture>
+                  </div>
+                </div>
+                <div class="partners__slide swiper-slide">
+                  <div class="partners__slide-img">
+                    <picture>
+                      <source media="(max-width: 767px)" srcset="./img/partners/02-s@2x.webp 2x">
+                      <source media="(max-width: 992px)"
+                        srcset="./img/partners/02-m.webp, ./img/partners/02-m@2x.webp 2x">
+                      <img src="./img/partners/02.webp" srcset="./img/partners/02@2x.webp 2x" alt="">
+                    </picture>
+                  </div>
+                </div>
+                <div class="partners__slide swiper-slide">
+                  <div class="partners__slide-img">
+                    <picture>
+                      <source media="(max-width: 767px)" srcset="./img/partners/01-s@2x.webp 2x">
+                      <source media="(max-width: 992px)"
+                        srcset="./img/partners/01-m.webp, ./img/partners/01-m@2x.webp 2x">
+                      <img src="./img/partners/01.webp" srcset="./img/partners/01@2x.webp 2x" alt="">
+                    </picture>
+                  </div>
+                </div>
+                <div class="partners__slide swiper-slide">
+                  <div class="partners__slide-img">
+                    <picture>
+                      <source media="(max-width: 767px)" srcset="./img/partners/02-s@2x.webp 2x">
+                      <source media="(max-width: 992px)"
+                        srcset="./img/partners/02-m.webp, ./img/partners/02-m@2x.webp 2x">
+                      <img src="./img/partners/02.webp" srcset="./img/partners/02@2x.webp 2x" alt="">
+                    </picture>
+                  </div>
+                </div>
+              </div>
+              <div class="partners__arrows swiper__arrows">
+                <button type="button" class="partners__arrow partners__arrow--prev swiper__arrow swiper__arrow--prev"
+                  style='--icon:url("../img/icons/01.svg")'></button>
+                <button type="button" class="partners__arrow partners__arrow--next swiper__arrow swiper__arrow--next"
+                  style='--icon:url("../img/icons/02.svg")'></button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="reliability js-video-trigger js-area">
+        <div class='reliability__container'>
+          <h2 class="reliability__title _title"><span>Сотрудничаем</span>
+            с надёжными <br> компаниями</h2>
+          <div class="reliability__inner">
+            <div class="reliability__slider swiper js-slider-reliability">
+              <div class="reliability__swiper swiper-wrapper">
+                <a href="javascript:void(0);" class="reliability__slide swiper-slide">
+                  <div class="reliability__slide-img">
+                    <picture>
+                      <source media="(max-width: 767px)" srcset="./img/reliability/01-s@2x.webp 2x">
+                      <source media="(max-width: 992px)"
+                        srcset="./img/reliability/01-m.webp, ./img/reliability/01-m@2x.webp 2x">
+                      <img src="./img/reliability/01.webp" srcset="./img/reliability/01@2x.webp 2x" alt="">
+                    </picture>
+                  </div>
+                  <div class="reliability__slide-title">Новый Втормет</div>
+                  <div class="reliability__slide-text">Сбор и переработка отходов лома черных и цветных металлов</div>
+                </a>
+                <a href="javascript:void(0);" class="reliability__slide swiper-slide">
+                  <div class="reliability__slide-img">
+                    <picture>
+                      <source media="(max-width: 767px)" srcset="./img/reliability/02-s@2x.webp 2x">
+                      <source media="(max-width: 992px)"
+                        srcset="./img/reliability/02-m.webp, ./img/reliability/02-m@2x.webp 2x">
+                      <img src="./img/reliability/02.webp" srcset="./img/reliability/02@2x.webp 2x" alt="">
+                    </picture>
+                  </div>
+                  <div class="reliability__slide-title">Норникель</div>
+                  <div class="reliability__slide-text">Добыча и переработка ценных металлов — никеля, палладия и платины
+                  </div>
+                </a>
+
+                <a href="javascript:void(0);" class="reliability__slide swiper-slide">
+                  <div class="reliability__slide-img">
+                    <picture>
+                      <source media="(max-width: 767px)" srcset="./img/reliability/03-s@2x.webp 2x">
+                      <source media="(max-width: 992px)"
+                        srcset="./img/reliability/03-m.webp, ./img/reliability/03-m@2x.webp 2x">
+                      <img src="./img/reliability/03.webp" srcset="./img/reliability/03@2x.webp 2x" alt="">
+                    </picture>
+                  </div>
+                  <div class="reliability__slide-title">Северсталь</div>
+                  <div class="reliability__slide-text">Производитель стали, ориентированный на инновации и развитие
+                  </div>
+                </a>
+
+                <a href="javascript:void(0);" class="reliability__slide swiper-slide">
+                  <div class="reliability__slide-img">
+                    <picture>
+                      <source media="(max-width: 767px)" srcset="./img/reliability/04-s@2x.webp 2x">
+                      <source media="(max-width: 992px)"
+                        srcset="./img/reliability/04-m.webp, ./img/reliability/04-m@2x.webp 2x">
+                      <img src="./img/reliability/04.webp" srcset="./img/reliability/04@2x.webp 2x" alt="">
+                    </picture>
+                  </div>
+                  <div class="reliability__slide-title">Сибур</div>
+                  <div class="reliability__slide-text">Крупный производитель пластмасс, химикатов и удобрений
+                  </div>
+                </a>
+
+                <a href="javascript:void(0);" class="reliability__slide swiper-slide">
+                  <div class="reliability__slide-img">
+                    <picture>
+                      <source media="(max-width: 767px)" srcset="./img/reliability/05-s@2x.webp 2x">
+                      <source media="(max-width: 992px)"
+                        srcset="./img/reliability/05-m.webp, ./img/reliability/05-m@2x.webp 2x">
+                      <img src="./img/reliability/05.webp" srcset="./img/reliability/05@2x.webp 2x" alt="">
+                    </picture>
+                  </div>
+                  <div class="reliability__slide-title">Совтрансавто</div>
+                  <div class="reliability__slide-text">Транспортная логистика, международные перевозки
+                  </div>
+                </a>
+
+                <a href="javascript:void(0);" class="reliability__slide swiper-slide">
+                  <div class="reliability__slide-img">
+                    <picture>
+                      <source media="(max-width: 767px)" srcset="./img/reliability/01-s@2x.webp 2x">
+                      <source media="(max-width: 992px)"
+                        srcset="./img/reliability/01-m.webp, ./img/reliability/01-m@2x.webp 2x">
+                      <img src="./img/reliability/01.webp" srcset="./img/reliability/01@2x.webp 2x" alt="">
+                    </picture>
+                  </div>
+                  <div class="reliability__slide-title">Новый Втормет</div>
+                  <div class="reliability__slide-text">Сбор и переработка отходов лома черных и цветных металлов</div>
+                </a>
+                <a href="javascript:void(0);" class="reliability__slide swiper-slide">
+                  <div class="reliability__slide-img">
+                    <picture>
+                      <source media="(max-width: 767px)" srcset="./img/reliability/02-s@2x.webp 2x">
+                      <source media="(max-width: 992px)"
+                        srcset="./img/reliability/02-m.webp, ./img/reliability/02-m@2x.webp 2x">
+                      <img src="./img/reliability/02.webp" srcset="./img/reliability/02@2x.webp 2x" alt="">
+                    </picture>
+                  </div>
+                  <div class="reliability__slide-title">Норникель</div>
+                  <div class="reliability__slide-text">Добыча и переработка ценных металлов — никеля, палладия и платины
+                  </div>
+                </a>
+
+                <a href="javascript:void(0);" class="reliability__slide swiper-slide">
+                  <div class="reliability__slide-img">
+                    <picture>
+                      <source media="(max-width: 767px)" srcset="./img/reliability/03-s@2x.webp 2x">
+                      <source media="(max-width: 992px)"
+                        srcset="./img/reliability/03-m.webp, ./img/reliability/03-m@2x.webp 2x">
+                      <img src="./img/reliability/03.webp" srcset="./img/reliability/03@2x.webp 2x" alt="">
+                    </picture>
+                  </div>
+                  <div class="reliability__slide-title">Северсталь</div>
+                  <div class="reliability__slide-text">Производитель стали, ориентированный на инновации и развитие
+                  </div>
+                </a>
+
+                <a href="javascript:void(0);" class="reliability__slide swiper-slide">
+                  <div class="reliability__slide-img">
+                    <picture>
+                      <source media="(max-width: 767px)" srcset="./img/reliability/04-s@2x.webp 2x">
+                      <source media="(max-width: 992px)"
+                        srcset="./img/reliability/04-m.webp, ./img/reliability/04-m@2x.webp 2x">
+                      <img src="./img/reliability/04.webp" srcset="./img/reliability/04@2x.webp 2x" alt="">
+                    </picture>
+                  </div>
+                  <div class="reliability__slide-title">Сибур</div>
+                  <div class="reliability__slide-text">Крупный производитель пластмасс, химикатов и удобрений
+                  </div>
+                </a>
+
+                <a href="javascript:void(0);" class="reliability__slide swiper-slide">
+                  <div class="reliability__slide-img">
+                    <picture>
+                      <source media="(max-width: 767px)" srcset="./img/reliability/05-s@2x.webp 2x">
+                      <source media="(max-width: 992px)"
+                        srcset="./img/reliability/05-m.webp, ./img/reliability/05-m@2x.webp 2x">
+                      <img src="./img/reliability/05.webp" srcset="./img/reliability/05@2x.webp 2x" alt="">
+                    </picture>
+                  </div>
+                  <div class="reliability__slide-title">Совтрансавто</div>
+                  <div class="reliability__slide-text">Транспортная логистика, международные перевозки
+                  </div>
+                </a>
+              </div>
+              <div class="reliability__arrows swiper__arrows">
+                <button type="button"
+                  class="reliability__arrow reliability__arrow--prev swiper__arrow swiper__arrow--prev"
+                  style='--icon:url("../img/icons/01.svg")'></button>
+                <button type="button"
+                  class="reliability__arrow reliability__arrow--next swiper__arrow swiper__arrow--next"
+                  style='--icon:url("../img/icons/02.svg")'></button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      @@include('components/planet/planet.html',{})
+    </main>
+    @@include('html/_footer.htm',{})
+    @@include('html/_popup.htm',{})
+  </div>
+  @@include('html/_js.htm',{})
+</body>
+
+</html>

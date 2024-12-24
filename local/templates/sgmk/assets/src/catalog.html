@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/_head.htm',{ "title":"HomePage" })
+
+<body>
+  <div class="wrapper">
+    @@include('html/_header.htm',{})
+
+    <main class="page">
+
+      <div class="breadcrumb breadcrumb--main" style='--linkColor: #bbbbbf; --activeColor: #535353'>
+        <ul class="breadcrumb__list breadcrumb__container">
+          <li class="breadcrumb__item">
+            <span><a href="javascript:void(0);"><span>
+                  Главная
+                </span></a></span>
+          </li>
+          <li class="breadcrumb__item breadcrumb__item--active">
+            <span>
+              <span>Каталог продукции</span>
+            </span>
+          </li>
+        </ul>
+      </div>
+
+
+
+      <section class="catalog">
+        <div class='catalog__container'>
+          <div class="catalog__top">
+            <h1 class="catalog__title _title">Каталог продукции</h1>
+          </div>
+          <div class="catalog__inner">
+            <aside class="catalog__aside aside">
+              <div class="aside__filter" style='--icon:url("../img/icons/08.svg"); --active:url("../img/icons/09.svg")'>
+                Фильтры</div>
+              <form action="#" class="aside__form form">
+                <div class="form__inner">
+                  <fieldset class="form__fieldset">
+                    <div class="form__fieldset-title">Тип продукции</div>
+                    <div class="form__fieldset-checkboxes">
+                      <div class="form__fieldset-checkbox checkbox">
+                        <input id="c_1" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1"
+                          name="form[]">
+                        <label for="c_1" class="checkbox__label"><span class="checkbox__text">Ферросплавы</span></label>
+                      </div>
+                      <div class="form__fieldset-checkbox checkbox">
+                        <input id="c_2" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1"
+                          name="form[]">
+                        <label for="c_2" class="checkbox__label"><span class="checkbox__text">Вторичный
+                            алюминий</span></label>
+                      </div>
+
+                      <div class="form__fieldset-checkbox checkbox">
+                        <input id="c_3" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1"
+                          name="form[]">
+                        <label for="c_3" class="checkbox__label"><span class="checkbox__text">Металлургический доломит и
+                            щебень</span></label>
+                      </div>
+
+                      <div class="form__fieldset-checkbox checkbox">
+                        <input id="c_4" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1"
+                          name="form[]">
+                        <label for="c_4" class="checkbox__label"><span
+                            class="checkbox__text">Металлопродукция</span></label>
+                      </div>
+
+
+                      <div class="form__fieldset-checkbox checkbox">
+                        <input id="c_5" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1"
+                          name="form[]">
+                        <label for="c_5" class="checkbox__label"><span class="checkbox__text">Лом чёрных
+                            металлов</span></label>
+                      </div>
+
+                      <div class="form__fieldset-checkbox checkbox">
+                        <input id="c_6" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1"
+                          name="form[]">
+                        <label for="c_6" class="checkbox__label"><span class="checkbox__text">Продукция переработки
+                            дерева</span></label>
+                      </div>
+
+                      <div class="form__fieldset-checkbox checkbox">
+                        <input id="c_7" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1"
+                          name="form[]">
+                        <label for="c_7" class="checkbox__label"><span class="checkbox__text">Продукция переработки
+                            крупногабаритных шин</span></label>
+                      </div>
+                    </div>
+
+                  </fieldset>
+                  <div class="form__group">
+                    <fieldset class="form__fieldset ">
+                      <div class="form__fieldset-title">Стандарт</div>
+                      <div class="form__fieldset-checkboxes form__fieldset-checkboxes--two">
+                        <div class="form__fieldset-checkbox checkbox">
+                          <input id="c_8" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1"
+                            name="form[]">
+                          <label for="c_8" class="checkbox__label"><span class="checkbox__text">ГОСТ
+                              34028</span></label>
+                        </div>
+                        <div class="form__fieldset-checkbox checkbox">
+                          <input id="c_9" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1"
+                            name="form[]">
+                          <label for="c_9" class="checkbox__label"><span class="checkbox__text">ГОСТ 5781</span></label>
+                        </div>
+
+                        <div class="form__fieldset-checkbox checkbox">
+                          <input id="c_10" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1"
+                            name="form[]">
+                          <label for="c_10" class="checkbox__label"><span class="checkbox__text">ТУ
+                              14-1-5473</span></label>
+                        </div>
+                      </div>
+
+                    </fieldset>
+
+
+                    <fieldset class="form__fieldset">
+                      <div class="form__fieldset-title">Толщина, мм</div>
+                      <div class="form__fieldset-checkboxes">
+                        <div class="form__fieldset-checkbox checkbox">
+                          <input id="c_11" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1"
+                            name="form[]">
+                          <label for="c_11" class="checkbox__label"><span class="checkbox__text">15 — 20</span></label>
+                        </div>
+                        <div class="form__fieldset-checkbox checkbox">
+                          <input id="c_12" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1"
+                            name="form[]">
+                          <label for="c_12" class="checkbox__label"><span class="checkbox__text">20 — 25</span></label>
+                        </div>
+                        <div class="form__fieldset-checkbox checkbox">
+                          <input id="c_13" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1"
+                            name="form[]">
+                          <label for="c_13" class="checkbox__label"><span class="checkbox__text">25 — 50</span></label>
+                        </div>
+                      </div>
+
+                    </fieldset>
+
+                    <fieldset class="form__fieldset">
+                      <div class="form__fieldset-title">Длина, мм</div>
+                      <div class="form__fieldset-checkboxes">
+                        <div class="form__fieldset-checkbox checkbox">
+                          <input id="c_14" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1"
+                            name="form[]">
+                          <label for="c_14" class="checkbox__label"><span class="checkbox__text">5000</span></label>
+                        </div>
+                        <div class="form__fieldset-checkbox checkbox">
+                          <input id="c_15" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1"
+                            name="form[]">
+                          <label for="c_15" class="checkbox__label"><span class="checkbox__text">10000</span></label>
+                        </div>
+                        <div class="form__fieldset-checkbox checkbox">
+                          <input id="c_16" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1"
+                            name="form[]">
+                          <label for="c_16" class="checkbox__label"><span class="checkbox__text">15000</span></label>
+                        </div>
+                      </div>
+
+                    </fieldset>
+
+                  </div>
+                  <button type="submit" class="form__button">Применить фильтры</button>
+                </div>
+              </form>
+            </aside>
+
+            <div class="catalog__content">
+              <div class="catalog__row">
+                <div class="catalog__column">
+                  <a href="javascript:void(0);" class="catalog__column-img">
+                    <picture>
+                      <source media="(max-width: 767px)" srcset="./img/catalog/01-s@2x.webp 2x">
+                      <source media="(max-width: 992px)"
+                        srcset="./img/catalog/01-m.webp, ./img/catalog/01-m@2x.webp 2x">
+                      <img loading="lazy" src="./img/catalog/01.webp" srcset="./img/catalog/01@2x.webp 2x" alt="">
+                    </picture>
+                  </a>
+                  <div class="catalog__column-content content-catalog">
+                    <div class="content-catalog__top">
+                      <a href="javascript:void(0);" class="content-catalog__category">Ферросплавы
+                      </a>
+                      <a href="javascript:void(0);" class="content-catalog__manufacturer">Производитель: ООО «ЗСЭМЗ»</a>
+                    </div>
+                    <div class="content-catalog__inner">
+                      <a href="javascript:void(0);" class="content-catalog__title">Ферросиликомарганец МнС17,
+                        FeMnSi18</a>
+                      <div class="content-catalog__text"></div>
+                    </div>
+                    <div class="content-catalog__bottom bottom-catalog">
+                      <div class="bottom-catalog__items">
+                        <dl class="bottom-catalog__item">
+                          <dt>Ширина:</dt>
+                          <dd>15 мм</dd>
+                        </dl>
+                        <dl class="bottom-catalog__item">
+                          <dt>Вес:</dt>
+                          <dd>-</dd>
+                        </dl>
+                        <dl class="bottom-catalog__item">
+                          <dt>Длина:</dt>
+                          <dd>-</dd>
+                        </dl>
+                        <dl class="bottom-catalog__item">
+                          <dt>Сорт:</dt>
+                          <dd>-</dd>
+                        </dl>
+                      </div>
+                      <a href="javascript:void(0);" class="bottom-catalog__link">Заказать у производителя</a>
+                    </div>
+                  </div>
+                  <div class="catalog__column-certificate certificate-catalog">
+                    <div class="certificate-catalog__icon js-certificate-icon"
+                      style='--icon:url("../img/icons/04.svg")'>
+                    </div>
+                    <div class="certificate-catalog__text">
+                      Есть сертификат от производителя. <br>
+                      Предоставляется по запросу
+                    </div>
+                  </div>
+                </div>
+                <div class="catalog__column">
+                  <a href="javascript:void(0);" class="catalog__column-img">
+                    <picture>
+                      <source media="(max-width: 767px)" srcset="./img/catalog/01-s@2x.webp 2x">
+                      <source media="(max-width: 992px)"
+                        srcset="./img/catalog/01-m.webp, ./img/catalog/01-m@2x.webp 2x">
+                      <img loading="lazy" src="./img/catalog/01.webp" srcset="./img/catalog/01@2x.webp 2x" alt="">
+                    </picture>
+                  </a>
+                  <div class="catalog__column-content content-catalog">
+                    <div class="content-catalog__top">
+                      <a href="javascript:void(0);" class="content-catalog__category">Ферросплавы
+                      </a>
+                      <a href="javascript:void(0);" class="content-catalog__manufacturer">Производитель: ООО «ЗСЭМЗ»</a>
+                    </div>
+                    <div class="content-catalog__inner">
+                      <a href="javascript:void(0);" class="content-catalog__title">Ферросилиций - ФС45/65/75,</a>
+                      <div class="content-catalog__text">в том числе с пониженным содержанием алюминия (0,5% max),
+                        титана
+                        (0,05% max и 0,15% max) и углерода (0,02% max) </div>
+                    </div>
+                    <div class="content-catalog__bottom bottom-catalog">
+                      <div class="bottom-catalog__items">
+                        <dl class="bottom-catalog__item">
+                          <dt>Ширина:</dt>
+                          <dd>15 мм</dd>
+                        </dl>
+                        <dl class="bottom-catalog__item">
+                          <dt>Вес:</dt>
+                          <dd>-</dd>
+                        </dl>
+                        <dl class="bottom-catalog__item">
+                          <dt>Длина:</dt>
+                          <dd>-</dd>
+                        </dl>
+                        <dl class="bottom-catalog__item">
+                          <dt>Сорт:</dt>
+                          <dd>-</dd>
+                        </dl>
+                      </div>
+                      <a href="javascript:void(0);" class="bottom-catalog__link">Заказать у производителя</a>
+                    </div>
+                  </div>
+                  <div class="catalog__column-certificate certificate-catalog">
+                    <div class="certificate-catalog__icon js-certificate-icon"
+                      style='--icon:url("../img/icons/04.svg")'>
+                    </div>
+                    <div class="certificate-catalog__text">
+                      Есть сертификат от производителя. <br>
+                      Предоставляется по запросу
+                    </div>
+                  </div>
+                </div>
+                <div class="catalog__column">
+                  <a href="javascript:void(0);" class="catalog__column-img">
+                    <picture>
+                      <source media="(max-width: 767px)" srcset="./img/catalog/01-s@2x.webp 2x">
+                      <source media="(max-width: 992px)"
+                        srcset="./img/catalog/01-m.webp, ./img/catalog/01-m@2x.webp 2x">
+                      <img loading="lazy" src="./img/catalog/01.webp" srcset="./img/catalog/01@2x.webp 2x" alt="">
+                    </picture>
+                  </a>
+                  <div class="catalog__column-content content-catalog">
+                    <div class="content-catalog__top">
+                      <a href="javascript:void(0);" class="content-catalog__category">Ферросплавы
+                      </a>
+                      <a href="javascript:void(0);" class="content-catalog__manufacturer">Производитель: ООО «ЗСЭМЗ»</a>
+                    </div>
+                    <div class="content-catalog__inner">
+                      <a href="javascript:void(0);" class="content-catalog__title">Ферромарганец - ФМн78, FeMn80C20</a>
+                      <div class="content-catalog__text">ГОСТ 34028</div>
+                    </div>
+                    <div class="content-catalog__bottom bottom-catalog">
+                      <div class="bottom-catalog__items">
+                        <dl class="bottom-catalog__item">
+                          <dt>Ширина:</dt>
+                          <dd>15 мм</dd>
+                        </dl>
+                        <dl class="bottom-catalog__item">
+                          <dt>Вес:</dt>
+                          <dd>-</dd>
+                        </dl>
+                        <dl class="bottom-catalog__item">
+                          <dt>Длина:</dt>
+                          <dd>-</dd>
+                        </dl>
+                        <dl class="bottom-catalog__item">
+                          <dt>Сорт:</dt>
+                          <dd>-</dd>
+                        </dl>
+                      </div>
+                      <a href="javascript:void(0);" class="bottom-catalog__link">Заказать у производителя</a>
+                    </div>
+                  </div>
+                  <div class="catalog__column-certificate certificate-catalog">
+                    <div class="certificate-catalog__icon js-certificate-icon"
+                      style='--icon:url("../img/icons/04.svg")'>
+                    </div>
+                    <div class="certificate-catalog__text">
+                      Есть сертификат от производителя. <br>
+                      Предоставляется по запросу
+                    </div>
+                  </div>
+                </div>
+                <div class="catalog__column">
+                  <a href="javascript:void(0);" class="catalog__column-img">
+                    <picture>
+                      <source media="(max-width: 767px)" srcset="./img/catalog/01-s@2x.webp 2x">
+                      <source media="(max-width: 992px)"
+                        srcset="./img/catalog/01-m.webp, ./img/catalog/01-m@2x.webp 2x">
+                      <img loading="lazy" src="./img/catalog/01.webp" srcset="./img/catalog/01@2x.webp 2x" alt="">
+                    </picture>
+                  </a>
+                  <div class="catalog__column-content content-catalog">
+                    <div class="content-catalog__top">
+                      <a href="javascript:void(0);" class="content-catalog__category">Ферросплавы
+                      </a>
+                      <a href="javascript:void(0);" class="content-catalog__manufacturer">Производитель: ООО «ЗСЭМЗ»</a>
+                    </div>
+                    <div class="content-catalog__inner">
+                      <a href="javascript:void(0);" class="content-catalog__title">Флюс для наплавки</a>
+                      <div class="content-catalog__text"></div>
+                    </div>
+                    <div class="content-catalog__bottom bottom-catalog">
+                      <div class="bottom-catalog__items">
+                        <dl class="bottom-catalog__item">
+                          <dt>Ширина:</dt>
+                          <dd>15 мм</dd>
+                        </dl>
+                        <dl class="bottom-catalog__item">
+                          <dt>Вес:</dt>
+                          <dd>-</dd>
+                        </dl>
+                        <dl class="bottom-catalog__item">
+                          <dt>Длина:</dt>
+                          <dd>-</dd>
+                        </dl>
+                        <dl class="bottom-catalog__item">
+                          <dt>Сорт:</dt>
+                          <dd>-</dd>
+                        </dl>
+                      </div>
+                      <a href="javascript:void(0);" class="bottom-catalog__link">Заказать у производителя</a>
+                    </div>
+                  </div>
+                  <div class="catalog__column-certificate certificate-catalog">
+                    <div class="certificate-catalog__icon js-certificate-icon"
+                      style='--icon:url("../img/icons/04.svg")'>
+                    </div>
+                    <div class="certificate-catalog__text">
+                      Есть сертификат от производителя. <br>
+                      Предоставляется по запросу
+                    </div>
+                  </div>
+                </div>
+                <div class="catalog__column">
+                  <a href="javascript:void(0);" class="catalog__column-img">
+                    <picture>
+                      <source media="(max-width: 767px)" srcset="./img/catalog/01-s@2x.webp 2x">
+                      <source media="(max-width: 992px)"
+                        srcset="./img/catalog/01-m.webp, ./img/catalog/01-m@2x.webp 2x">
+                      <img loading="lazy" src="./img/catalog/01.webp" srcset="./img/catalog/01@2x.webp 2x" alt="">
+                    </picture>
+                  </a>
+                  <div class="catalog__column-content content-catalog">
+                    <div class="content-catalog__top">
+                      <a href="javascript:void(0);" class="content-catalog__category">Вторичный алюминий
+                      </a>
+                      <a href="javascript:void(0);" class="content-catalog__manufacturer">Производитель: ООО «ЗСЭМЗ»</a>
+                    </div>
+                    <div class="content-catalog__inner">
+                      <a href="javascript:void(0);" class="content-catalog__title">Микрокремнезем</a>
+                      <div class="content-catalog__text"></div>
+                    </div>
+                    <div class="content-catalog__bottom bottom-catalog">
+                      <div class="bottom-catalog__items">
+                        <dl class="bottom-catalog__item">
+                          <dt>Ширина:</dt>
+                          <dd>15 мм</dd>
+                        </dl>
+                        <dl class="bottom-catalog__item">
+                          <dt>Вес:</dt>
+                          <dd>-</dd>
+                        </dl>
+                        <dl class="bottom-catalog__item">
+                          <dt>Длина:</dt>
+                          <dd>-</dd>
+                        </dl>
+                        <dl class="bottom-catalog__item">
+                          <dt>Сорт:</dt>
+                          <dd>-</dd>
+                        </dl>
+                      </div>
+                      <a href="javascript:void(0);" class="bottom-catalog__link">Заказать у производителя</a>
+                    </div>
+                  </div>
+                  <div class="catalog__column-certificate certificate-catalog">
+                    <div class="certificate-catalog__icon js-certificate-icon"
+                      style='--icon:url("../img/icons/04.svg")'>
+                    </div>
+                    <div class="certificate-catalog__text">
+                      Есть сертификат от производителя. <br>
+                      Предоставляется по запросу
+                    </div>
+                  </div>
+                </div>
+                <div class="catalog__column">
+                  <a href="javascript:void(0);" class="catalog__column-img">
+                    <picture>
+                      <source media="(max-width: 767px)" srcset="./img/catalog/01-s@2x.webp 2x">
+                      <source media="(max-width: 992px)"
+                        srcset="./img/catalog/01-m.webp, ./img/catalog/01-m@2x.webp 2x">
+                      <img loading="lazy" src="./img/catalog/01.webp" srcset="./img/catalog/01@2x.webp 2x" alt="">
+                    </picture>
+                  </a>
+                  <div class="catalog__column-content content-catalog">
+                    <div class="content-catalog__top">
+                      <a href="javascript:void(0);" class="content-catalog__category">Вторичный алюминий
+                      </a>
+                      <a href="javascript:void(0);" class="content-catalog__manufacturer">Производитель: ООО «ЗСЭМЗ»</a>
+                    </div>
+                    <div class="content-catalog__inner">
+                      <a href="javascript:void(0);" class="content-catalog__title">Сплав алюминий вторичный АВ87, АВ97,
+                        АК5М2</a>
+                      <div class="content-catalog__text"></div>
+                    </div>
+                    <div class="content-catalog__bottom bottom-catalog">
+                      <div class="bottom-catalog__items">
+                        <dl class="bottom-catalog__item">
+                          <dt>Ширина:</dt>
+                          <dd>15 мм</dd>
+                        </dl>
+                        <dl class="bottom-catalog__item">
+                          <dt>Вес:</dt>
+                          <dd>-</dd>
+                        </dl>
+                        <dl class="bottom-catalog__item">
+                          <dt>Длина:</dt>
+                          <dd>-</dd>
+                        </dl>
+                        <dl class="bottom-catalog__item">
+                          <dt>Сорт:</dt>
+                          <dd>-</dd>
+                        </dl>
+                      </div>
+                      <a href="javascript:void(0);" class="bottom-catalog__link">Заказать у производителя</a>
+                    </div>
+                  </div>
+                  <div class="catalog__column-certificate certificate-catalog">
+                    <div class="certificate-catalog__icon js-certificate-icon"
+                      style='--icon:url("../img/icons/04.svg")'>
+                    </div>
+                    <div class="certificate-catalog__text">
+                      Есть сертификат от производителя. <br>
+                      Предоставляется по запросу
+                    </div>
+                  </div>
+                </div>
+                <div class="catalog__column">
+                  <a href="javascript:void(0);" class="catalog__column-img">
+                    <picture>
+                      <source media="(max-width: 767px)" srcset="./img/catalog/01-s@2x.webp 2x">
+                      <source media="(max-width: 992px)"
+                        srcset="./img/catalog/01-m.webp, ./img/catalog/01-m@2x.webp 2x">
+                      <img loading="lazy" src="./img/catalog/01.webp" srcset="./img/catalog/01@2x.webp 2x" alt="">
+                    </picture>
+                  </a>
+                  <div class="catalog__column-content content-catalog">
+                    <div class="content-catalog__top">
+                      <a href="javascript:void(0);" class="content-catalog__category">Вторичный алюминий
+                      </a>
+                      <a href="javascript:void(0);" class="content-catalog__manufacturer">Производитель: ООО «ЗСЭМЗ»</a>
+                    </div>
+                    <div class="content-catalog__inner">
+                      <a href="javascript:void(0);" class="content-catalog__title">Чушка мелкая</a>
+                      <div class="content-catalog__text"></div>
+                    </div>
+                    <div class="content-catalog__bottom bottom-catalog">
+                      <div class="bottom-catalog__items">
+                        <dl class="bottom-catalog__item">
+                          <dt>Ширина:</dt>
+                          <dd>15 мм</dd>
+                        </dl>
+                        <dl class="bottom-catalog__item">
+                          <dt>Вес:</dt>
+                          <dd>1,5 – 2,5 кг</dd>
+                        </dl>
+                        <dl class="bottom-catalog__item">
+                          <dt>Длина:</dt>
+                          <dd>-</dd>
+                        </dl>
+                        <dl class="bottom-catalog__item">
+                          <dt>Сорт:</dt>
+                          <dd>-</dd>
+                        </dl>
+                      </div>
+                      <a href="javascript:void(0);" class="bottom-catalog__link">Заказать у производителя</a>
+                    </div>
+                  </div>
+                  <div class="catalog__column-certificate certificate-catalog">
+                    <div class="certificate-catalog__icon js-certificate-icon"
+                      style='--icon:url("../img/icons/04.svg")'>
+                    </div>
+                    <div class="certificate-catalog__text">
+                      Есть сертификат от производителя. <br>
+                      Предоставляется по запросу
+                    </div>
+                  </div>
+                </div>
+                <div class="catalog__column">
+                  <a href="javascript:void(0);" class="catalog__column-img">
+                    <picture>
+                      <source media="(max-width: 767px)" srcset="./img/catalog/01-s@2x.webp 2x">
+                      <source media="(max-width: 992px)"
+                        srcset="./img/catalog/01-m.webp, ./img/catalog/01-m@2x.webp 2x">
+                      <img loading="lazy" src="./img/catalog/01.webp" srcset="./img/catalog/01@2x.webp 2x" alt="">
+                    </picture>
+                  </a>
+                  <div class="catalog__column-content content-catalog">
+                    <div class="content-catalog__top">
+                      <a href="javascript:void(0);" class="content-catalog__category">Вторичный алюминий
+                      </a>
+                      <a href="javascript:void(0);" class="content-catalog__manufacturer">Производитель: ООО «ЗСЭМЗ»</a>
+                    </div>
+                    <div class="content-catalog__inner">
+                      <a href="javascript:void(0);" class="content-catalog__title">Чушка крупная</a>
+                      <div class="content-catalog__text"></div>
+                    </div>
+                    <div class="content-catalog__bottom bottom-catalog">
+                      <div class="bottom-catalog__items">
+                        <dl class="bottom-catalog__item">
+                          <dt>Ширина:</dt>
+                          <dd>15 мм</dd>
+                        </dl>
+                        <dl class="bottom-catalog__item">
+                          <dt>Вес:</dt>
+                          <dd>15 – 17 кг</dd>
+                        </dl>
+                        <dl class="bottom-catalog__item">
+                          <dt>Длина:</dt>
+                          <dd>-</dd>
+                        </dl>
+                        <dl class="bottom-catalog__item">
+                          <dt>Сорт:</dt>
+                          <dd>-</dd>
+                        </dl>
+                      </div>
+                      <a href="javascript:void(0);" class="bottom-catalog__link">Заказать у производителя</a>
+                    </div>
+                  </div>
+                  <div class="catalog__column-certificate certificate-catalog">
+                    <div class="certificate-catalog__icon js-certificate-icon"
+                      style='--icon:url("../img/icons/04.svg")'>
+                    </div>
+                    <div class="certificate-catalog__text">
+                      Есть сертификат от производителя. <br>
+                      Предоставляется по запросу
+                    </div>
+                  </div>
+                </div>
+                <div class="catalog__column">
+                  <a href="javascript:void(0);" class="catalog__column-img">
+                    <picture>
+                      <source media="(max-width: 767px)" srcset="./img/catalog/01-s@2x.webp 2x">
+                      <source media="(max-width: 992px)"
+                        srcset="./img/catalog/01-m.webp, ./img/catalog/01-m@2x.webp 2x">
+                      <img loading="lazy" src="./img/catalog/01.webp" srcset="./img/catalog/01@2x.webp 2x" alt="">
+                    </picture>
+                  </a>
+                  <div class="catalog__column-content content-catalog">
+                    <div class="content-catalog__top">
+                      <a href="javascript:void(0);" class="content-catalog__category">Металлургический доломит и щебень
+                      </a>
+                      <a href="javascript:void(0);" class="content-catalog__manufacturer">Производитель: <br> ООО
+                        «Сибирский доломит»</a>
+                    </div>
+                    <div class="content-catalog__inner">
+                      <a href="javascript:void(0);" class="content-catalog__title">Щебень из шлака доменного</a>
+                      <div class="content-catalog__text"></div>
+                    </div>
+                    <div class="content-catalog__bottom bottom-catalog">
+                      <div class="bottom-catalog__items">
+                        <dl class="bottom-catalog__item">
+                          <dt>Ширина:</dt>
+                          <dd>-</dd>
+                        </dl>
+                        <dl class="bottom-catalog__item">
+                          <dt>Вес:</dt>
+                          <dd>-</dd>
+                        </dl>
+                        <dl class="bottom-catalog__item">
+                          <dt>Длина:</dt>
+                          <dd>-</dd>
+                        </dl>
+                        <dl class="bottom-catalog__item">
+                          <dt>Сорт:</dt>
+                          <dd>-</dd>
+                        </dl>
+                      </div>
+                      <a href="javascript:void(0);" class="bottom-catalog__link">Заказать у производителя</a>
+                    </div>
+                  </div>
+                  <div class="catalog__column-certificate certificate-catalog">
+                    <div class="certificate-catalog__icon js-certificate-icon"
+                      style='--icon:url("../img/icons/04.svg")'>
+                    </div>
+                    <div class="certificate-catalog__text">
+                      Есть сертификат от производителя. <br>
+                      Предоставляется по запросу
+                    </div>
+                  </div>
+                </div>
+
+                <div class="catalog__column">
+                  <a href="javascript:void(0);" class="catalog__column-img">
+                    <picture>
+                      <source media="(max-width: 767px)" srcset="./img/catalog/01-s@2x.webp 2x">
+                      <source media="(max-width: 992px)"
+                        srcset="./img/catalog/01-m.webp, ./img/catalog/01-m@2x.webp 2x">
+                      <img loading="lazy" src="./img/catalog/01.webp" srcset="./img/catalog/01@2x.webp 2x" alt="">
+                    </picture>
+                  </a>
+                  <div class="catalog__column-content content-catalog">
+                    <div class="content-catalog__top">
+                      <a href="javascript:void(0);" class="content-catalog__category">Вторичный алюминий
+                      </a>
+                      <a href="javascript:void(0);" class="content-catalog__manufacturer">Производитель: ООО «ЗСЭМЗ»</a>
+                    </div>
+                    <div class="content-catalog__inner">
+                      <a href="javascript:void(0);" class="content-catalog__title">Чушка крупная</a>
+                      <div class="content-catalog__text"></div>
+                    </div>
+                    <div class="content-catalog__bottom bottom-catalog">
+                      <div class="bottom-catalog__items">
+                        <dl class="bottom-catalog__item">
+                          <dt>Ширина:</dt>
+                          <dd>15 мм</dd>
+                        </dl>
+                        <dl class="bottom-catalog__item">
+                          <dt>Вес:</dt>
+                          <dd>15 – 17 кг</dd>
+                        </dl>
+                        <dl class="bottom-catalog__item">
+                          <dt>Длина:</dt>
+                          <dd>-</dd>
+                        </dl>
+                        <dl class="bottom-catalog__item">
+                          <dt>Сорт:</dt>
+                          <dd>-</dd>
+                        </dl>
+                      </div>
+                      <a href="javascript:void(0);" class="bottom-catalog__link">Заказать у производителя</a>
+                    </div>
+                  </div>
+                  <div class="catalog__column-certificate certificate-catalog">
+                    <div class="certificate-catalog__icon js-certificate-icon"
+                      style='--icon:url("../img/icons/04.svg")'>
+                    </div>
+                    <div class="certificate-catalog__text">
+                      Есть сертификат от производителя. <br>
+                      Предоставляется по запросу
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <nav class="catalog__pagging pagging">
+                <a href="javascript:void(0);" class="pagging__arrow" style='--icon:url("../img/icons/05.svg")'></a>
+                <ul class="pagging__list">
+                  <li>
+                    <a href="javascript:void(0);" class="pagging__item _active">1</a>
+                  </li>
+                  <li>
+                    <a href="javascript:void(0);" class="pagging__item">2</a>
+                  </li>
+                  <li>
+                    <a href="javascript:void(0);" class="pagging__item">3</a>
+                  </li>
+                  <li>
+                    <a href="javascript:void(0);" class="pagging__item">...</a>
+                  </li>
+                  <li>
+                    <a href="javascript:void(0);" class="pagging__item">16</a>
+                  </li>
+                </ul>
+                <a href="javascript:void(0);" class="pagging__arrow" style='--icon:url("../img/icons/06.svg")'></a>
+              </nav>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+
+
+
+    </main>
+    @@include('html/_popup.htm',{}) @@include('html/_footer.htm',{})
+  </div>
+  @@include('html/_js.htm',{})
+</body>
+
+</html>

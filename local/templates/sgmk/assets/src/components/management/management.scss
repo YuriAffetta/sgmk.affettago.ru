@@ -1,0 +1,207 @@
+.management {
+  // .management__container
+
+  &__container {
+  }
+
+  // .management__title
+
+  &__title {
+    margin-bottom: 47px;
+    span {
+      @media (min-width: $tablet) {
+        display: inline-block;
+      }
+    }
+    @media (max-width: $tablet) {
+      margin-bottom: 37px;
+    }
+    @media (max-width: $mobile) {
+      margin-bottom: 24px;
+    }
+  }
+
+  // .management__links
+
+  &__links {
+    @extend %hidescroll;
+    overflow: auto;
+    @media (max-width: $mobile) {
+      margin: 0px var(--pad-neg);
+      padding: 0px var(--pad);
+    }
+  }
+
+  // .management__list
+
+  &__list {
+    display: inline-flex;
+    flex-wrap: nowrap;
+    white-space: nowrap;
+    gap: 32px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid cl(gry-dvdider);
+    margin-bottom: 53px;
+    @media (max-width: $tablet) {
+      gap: 24px;
+      margin-bottom: 44px;
+    }
+    @media (max-width: $mobile) {
+      gap: 16px;
+      margin: 0px var(--pad-neg);
+      padding: 0px var(--pad) 5px;
+      margin-bottom: 32px;
+    }
+  }
+
+  // .management__link
+
+  &__link {
+  }
+
+  // .management__row
+
+  &__row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    @media (max-width: $tablet) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+    @media (max-width: $mobile) {
+      gap: 48px;
+    }
+  }
+
+  // .management__item
+
+  &__item {
+  }
+}
+
+.management-item {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  @media (max-width: $tablet) {
+    gap: 20px;
+  }
+  @media (max-width: $mobile) {
+    gap: 16px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  // .management-item__image
+
+  &__image {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    align-items: center;
+    background: cl(gry-light);
+    --width: 207px;
+    height: 220px;
+    flex: 0 0 var(--width);
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      position: relative;
+      z-index: 2;
+    }
+
+    @media (max-width: $mobile) {
+      --width: 158px;
+      flex: 0 0 auto;
+      width: var(--width);
+      height: 166px;
+    }
+    &::before {
+      content: "";
+      width: 100%;
+      position: absolute;
+      height: 100%;
+      position: absolute;
+      background: url("../img/icons/image-placeholder.svg") center center
+        no-repeat;
+    }
+  }
+
+  // .management-item__content
+
+  &__content {
+  }
+
+  // .management-item__name
+
+  &__name {
+    text-transform: uppercase;
+    font-size: rem(23);
+    line-height: 110%; /* 25.3px */
+    font-family: $fontSecondary;
+    letter-spacing: -0.69px;
+    margin-bottom: 12px;
+    color: cl(alt);
+    @media (max-width: $tablet) {
+      font-size: rem(20);
+      letter-spacing: -0.6px;
+      margin-bottom: 12px;
+    }
+    @media (max-width: $mobile) {
+      font-size: rem(16);
+      letter-spacing: -0.48px;
+      margin-bottom: 8px;
+    }
+  }
+
+  // .management-item__position
+
+  &__position {
+    font-size: rem(18);
+    line-height: 140%; /* 25.2px */
+    letter-spacing: -0.09px;
+    margin-bottom: 32px;
+    @media (max-width: $tablet) {
+    }
+    @media (max-width: $mobile) {
+      margin-bottom: 16px;
+      font-size: rem(14);
+      letter-spacing: -0.07px;
+    }
+  }
+
+  // .management-item__contacts
+
+  &__contacts {
+    display: flex;
+    align-items: center;
+    font-size: rem(18);
+    line-height: 140%; /* 25.2px */
+    letter-spacing: -0.09px;
+    a {
+      &:not(:first-child) {
+        display: flex;
+        align-items: center;
+        margin-left: 12px;
+        &::before {
+          content: "/";
+          text-align: center;
+          margin-right: 12px;
+          --size: 24px;
+          width: var(--size);
+          height: var(--size);
+          flex: 0 0 var(--size);
+        }
+      }
+    }
+    @media (max-width: $mobile) {
+      justify-content: center;
+    }
+    @media (max-width: $mobile) {
+      font-size: rem(14);
+      letter-spacing: -0.07px;
+    }
+  }
+}

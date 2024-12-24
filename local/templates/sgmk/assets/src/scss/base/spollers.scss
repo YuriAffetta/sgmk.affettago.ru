@@ -1,0 +1,181 @@
+// Базові стилі спойлерів
+// Сніппет (HTML): spoller
+
+// Блок зі спойлерами
+.spollers {
+  display: grid;
+  gap: 15px;
+}
+// Спойлер
+.spollers__item {
+  font-size: rem(20);
+}
+// Заголовок спойлера
+.spollers__title {
+  width: 100%;
+  cursor: default;
+  text-align: left;
+  border: rem(1) solid cl(blue-gray);
+  padding: rem(20) rem(60) rem(17) rem(20);
+  border-radius: rem(2);
+  position: relative;
+  list-style: none;
+
+  font-family: $fontSecondary;
+  font-size: rem(23);
+  line-height: 110%; /* 25.3px */
+  letter-spacing: -0.69px;
+  text-transform: uppercase;
+
+  transition: all $time $tr 0s;
+
+  @media (max-width: $tablet) {
+    font-size: rem(20);
+    line-height: 110%; /* 22px */
+    letter-spacing: -0.6px;
+    padding: rem(20) rem(60) rem(20) rem(20);
+  }
+
+  @media (max-width: $mobile) {
+    font-size: rem(16);
+    line-height: 110%; /* 17.6px */
+    letter-spacing: -0.48px;
+    padding: rem(16) rem(40) rem(16) rem(12);
+  }
+  &::marker,
+  &::-webkit-details-marker {
+    display: none;
+  }
+  ._spoller-init & {
+    cursor: pointer;
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      right: 20px;
+      top: 50%;
+      background: cl(alt);
+      height: 2px;
+      width: 12px;
+      transition: transform 0.5s ease 0s;
+
+      @media (max-width: $mobile) {
+        right: 14px;
+        width: rem(8);
+      }
+    }
+    &::before {
+      transform: translate(-75%, -50%) rotate(40deg);
+    }
+    &::after {
+      transform: translate(0, -50%) rotate(-40deg);
+    }
+    &._spoller-active {
+      color: cl(alt);
+      &::before {
+        transform: translateX(-75%) rotate(-40deg);
+      }
+      &::after {
+        transform: rotate(40deg);
+      }
+    }
+    /*
+		._spoller-init & {
+			position: relative;
+			width: 100%;
+			text-align: left;
+			&::before,
+			&::after {
+				content: "";
+				position: absolute;
+				right: 0;
+				top: rem(12);
+				height: rem(1);
+				transition: all 0.3s ease 0s;
+				width: rem(10);
+				background-color: #000;
+			}
+			&::before {
+				transform: rotate(40deg);
+				right: rem(7);
+			}
+			&::after {
+				transform: rotate(-40deg);
+			}
+		}
+		&._spoller-active {
+			&::before {
+				transform: rotate(-40deg);
+			}
+			&::after {
+				transform: rotate(40deg);
+			}
+		}
+		*/
+  }
+}
+// Контент спойлера
+.spollers__body {
+  margin-top: rem(8);
+  padding: rem(20);
+  border-radius: rem(2);
+  border: rem(1) solid cl(blue-gray);
+
+  @media (max-width: $tablet) {
+    margin-top: rem(4);
+  }
+
+  @media (max-width: $mobile) {
+    padding: rem(15) rem(8);
+  }
+
+  ul {
+    &:not(:last-child) {
+      margin-bottom: rem(23);
+
+      @media (max-width: $mobile) {
+        margin-bottom: rem(20);
+      }
+    }
+    li {
+      a {
+        font-size: rem(18);
+        line-height: 140%; /* 25.2px */
+        letter-spacing: -0.09px;
+
+        position: relative;
+        padding-left: rem(25);
+
+        @media (max-width: $mobile) {
+          font-size: rem(14);
+          line-height: 140%; /* 19.6px */
+          letter-spacing: -0.07px;
+          padding-left: rem(20);
+        }
+
+        &::before {
+          content: "";
+          position: absolute;
+          top: rem(11);
+          left: rem(10);
+
+          --size: 4px;
+
+          width: var(--size);
+          height: var(--size);
+          flex: 0 0 var(--size);
+
+          border-radius: 50%;
+          background: cl(text);
+
+          @media (max-width: $mobile) {
+            --size: 3px;
+
+            top: rem(9);
+            left: rem(8);
+          }
+        }
+      }
+    }
+  }
+}

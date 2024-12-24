@@ -1,0 +1,10 @@
+.idea
+.vscode
+.cache
+.eslintcache
+*.log
+/node_modules/
+*.mp4
+*.mp3
+/bitrix/
+/local/templates/sgmk/assets/node_modules/

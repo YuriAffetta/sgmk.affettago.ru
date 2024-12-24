@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/_head.htm',{ "title":"HomePage" })
+
+<body>
+  <div class="wrapper">
+    @@include('html/_header-index.htm',{})
+
+    <main class="page page--no-indent">
+
+
+      <section class="home js-first">
+        <div class='home__container'>
+
+          <div class="home__inner">
+            <div class="home__breadcrumb breadcrumb" style='--linkColor: #bbbbbf; --activeColor: #fff'>
+              <ul class="breadcrumb__list">
+                <li class="breadcrumb__item">
+                  <span><a href="javascript:void(0);"><span>
+                        Главная
+                      </span></a></span>
+                </li>
+
+                <li class="breadcrumb__item">
+                  <span><a href="javascript:void(0);"><span>
+                        Направления бизнеса
+                      </span></a></span>
+                </li>
+                <li class="breadcrumb__item breadcrumb__item--active">
+                  <span>
+                    <span>Экомет</span>
+                  </span>
+                </li>
+              </ul>
+            </div>
+            <h1 class="home__title _title">
+              <span>Экомет –</span>
+              от алюминиевого лома <br>к порядку и форме
+            </h1>
+
+            <a href="javascript:void(0);" class="home__link btn btn--whte">Перейти на сайт компании</a>
+          </div>
+          <div class="home__img">
+            <picture>
+              <source media="(max-width: 767px)" srcset="./img/home/02-s@2x.webp 2x">
+              <source media="(max-width: 1360px)" srcset="./img/home/02-m.webp, ./img/home/02-m@2x.webp 2x">
+              <img src="./img/home/02.webp" srcset="./img/home/02@2x.webp 2x" alt="">
+            </picture>
+          </div>
+        </div>
+      </section>
+
+      @@include('components/activity/activity.html',{})
+      @@include('components/prospects/prospects.html',{})
+
+
+      <section class="produce produce--two js-produce">
+        <div class='produce__container'>
+          <div class="produce__top">
+            <h2 class="produce__title _title js-produce-head">
+              сферы
+              <span>применения</span>
+            </h2>
+          </div>
+          <div class="produce__slider swiper js-slider-produce ">
+            <div class="produce__swiper swiper-wrapper">
+              <div class="produce__column produce__slide swiper-slide js-produce-column">
+                <div class="produce__column-content">
+                  <h3 class="produce__column-title">машиностроение</h3>
+                  <div class="produce__column-text">
+                    Единственный в России производитель особо чистых премиальных видов ферросилиция. Предприятие
+                    в контуре
+                    всех принципов ESG повестки, использует технологии опережающего развития
+                  </div>
+                  <a href="javascript:void(0);" class="produce__column-link btn">Связаться с менеджером</a>
+                </div>
+                <div class="produce__column-image">
+                  <picture>
+                    <source media="(max-width: 767px)" srcset="./img/produce/04-s.webp, ./img/produce/04-s@2x.webp 2x">
+                    <source media="(max-width: 1360px)" srcset="./img/produce/04-m.webp, ./img/produce/04-m@2x.webp 2x">
+                    <img src="./img/produce/04.webp" srcset="./img/produce/04@2x.webp 2x" alt="">
+                  </picture>
+                </div>
+              </div>
+              <div class="produce__column produce__slide swiper-slide js-produce-column">
+                <div class="produce__column-content">
+                  <h3 class="produce__column-title">авиапромышленность</h3>
+                  <div class="produce__column-text">
+                    Завод по производству вторичного алюминия. Завод оснащён современным оборудованием и выпускает
+                    только
+                    качественные сплавы, отвечающие международным стандартам
+                  </div>
+                  <a href="javascript:void(0);" class="produce__column-link btn">Связаться с менеджером</a>
+                </div>
+                <div class="produce__column-image">
+                  <picture>
+                    <source media="(max-width: 767px)" srcset="./img/produce/05-s.webp, ./img/produce/05-s@2x.webp 2x">
+                    <source media="(max-width: 1360px)" srcset="./img/produce/05-m.webp, ./img/produce/05-m@2x.webp 2x">
+                    <img src="./img/produce/05.webp" srcset="./img/produce/05@2x.webp 2x" alt="">
+                  </picture>
+                </div>
+              </div>
+              <div class="produce__column produce__slide swiper-slide js-produce-column">
+                <div class="produce__column-content">
+                  <h3 class="produce__column-title">Переработка <br> крупногабаритных шин</h3>
+                  <div class="produce__column-text">
+                    Объём переработки КГШ — 16 тыс.тн/год <br>Завод запущен в 2023 году
+                  </div>
+                  <a href="javascript:void(0);" class="produce__column-link btn">Узнать подробнее</a>
+                </div>
+                <div class="produce__column-image">
+                  <picture>
+                    <source media="(max-width: 767px)"
+                      srcset="./img/produce/03-s@2x.webp, ./img/produce/03-s@2x.webp 2x">
+                    <source media="(max-width: 1360px)" srcset="./img/produce/03-m.webp, ./img/produce/03-m@2x.webp 2x">
+                    <img src="./img/produce/03.webp" srcset="./img/produce/03@2x.webp 2x" alt="">
+                  </picture>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+
+
+
+        </div>
+      </section>
+      @@include('components/supply/supply.html',{})
+      @@include('components/contribution/contribution.html',{})
+      @@include('components/contacts/contacts.html',{})
+      @@include('components/bumph/bumph.html',{})
+      @@include('components/certificate/certificate.html',{})
+    </main>
+    @@include('html/_popup.htm',{}) @@include('html/_footer.htm',{})
+  </div>
+  @@include('html/_js.htm',{})
+</body>
+
+</html>

@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="ru">
+@@include('html/_head.htm',{ "title":"HomePage" })
+
+<body>
+  <div class="wrapper">
+    @@include('html/_header.htm',{})
+
+    <main class="page">
+      <div class="breadcrumb breadcrumb--main" style='--linkColor: #BBBBBF; --activeColor: #535353'>
+        <ul class="breadcrumb__list breadcrumb__container">
+          <li class="breadcrumb__item">
+            <span><a href="home.html"><span>
+                  Главная
+                </span></a></span>
+          </li>
+          <li class="breadcrumb__item breadcrumb__item--active">
+            <span>
+              <span>Поиск</span>
+            </span>
+          </li>
+        </ul>
+      </div>
+      <section class="search-result">
+        <div class='search-result__container'>
+          <div class="search-result__inner">
+            <h1 class="search-result__title _title">Результаты поиска</h1>
+            <form action="#" data-ajax class="search-result__form"
+              style="--icon:url(&quot;../img/icons/search.svg&quot;)">
+              <div class="search-result__head">
+                <input autocomplete="off" type="search" name="form[]" data-error="Ошибка" placeholder="Поиск"
+                  value="Ферро" class="input">
+                <button type="reset" class="search-result__reset" title="Сбросить"></button>
+                <button type="submit" class="search-result__send">Найти</button>
+
+              </div>
+              <div class="search-result__quiantity">
+                Найдено: 113 совпадений
+              </div>
+            </form>
+            <div class="search-result__item result-search">
+              <div class="result-search__name">
+                <span>Ферро</span>силиций
+              </div>
+              <div class="result-search__content">
+                Единственный в России производитель особо чистых премиальных видов ферросилиция. Предприятие в контуре
+                <br>
+                всех принципов ESG повестки, использует технологии опережающего развития
+              </div>
+              <a href="javascript:void(0);" class="result-search__link">Каталог продукции </a>
+            </div>
+            <div class="search-result__item result-search">
+              <div class="result-search__name">
+                <span>Ферро</span>силиций
+              </div>
+              <div class="result-search__content">
+                Единственный в России производитель особо чистых премиальных видов ферросилиция. Предприятие в контуре
+                <br>
+                всех принципов ESG повестки, использует технологии опережающего развития
+              </div>
+              <a href="javascript:void(0);" class="result-search__link">Каталог продукции </a>
+            </div>
+            <div class="search-result__item result-search">
+              <div class="result-search__name">
+                <span>Ферро</span>силикомарганец
+              </div>
+              <div class="result-search__content">
+                Единственный в России производитель особо чистых премиальных видов ферросилиция. Предприятие в контуре
+                <br>
+                всех принципов ESG повестки, использует технологии опережающего развития
+              </div>
+              <a href="javascript:void(0);" class="result-search__link">Каталог продукции </a>
+            </div>
+            <div class="search-result__item result-search">
+              <div class="result-search__name">
+                <span>Ферро</span>силиций
+              </div>
+              <div class="result-search__content">
+                Единственный в России производитель особо чистых премиальных видов ферросилиция. Предприятие в контуре
+                <br>
+                всех принципов ESG повестки, использует технологии опережающего развития
+              </div>
+              <a href="javascript:void(0);" class="result-search__link">Каталог продукции </a>
+            </div>
+            <div class="search-result__item result-search">
+              <div class="result-search__name">
+                <span>Ферро</span>силиций
+              </div>
+              <div class="result-search__content">
+                Единственный в России производитель особо чистых премиальных видов ферросилиция. Предприятие в контуре
+                <br>
+                всех принципов ESG повестки, использует технологии опережающего развития
+              </div>
+              <a href="javascript:void(0);" class="result-search__link">Каталог продукции </a>
+            </div>
+            <div class="search-result__item result-search">
+              <div class="result-search__name">
+                <span>Ферро</span>силикомарганец
+              </div>
+              <div class="result-search__content">
+                Единственный в России производитель особо чистых премиальных видов ферросилиция. Предприятие в контуре
+                <br>
+                всех принципов ESG повестки, использует технологии опережающего развития
+              </div>
+              <a href="javascript:void(0);" class="result-search__link">Каталог продукции </a>
+            </div>
+            <nav class="search-result__pagging pagging">
+              <a href="javascript:void(0);" class="pagging__arrow" style='--icon:url("../img/icons/05.svg")'></a>
+              <ul class="pagging__list">
+                <li>
+                  <a href="javascript:void(0);" class="pagging__item _active">1</a>
+                </li>
+                <li>
+                  <a href="javascript:void(0);" class="pagging__item">2</a>
+                </li>
+                <li>
+                  <a href="javascript:void(0);" class="pagging__item">3</a>
+                </li>
+                <li>
+                  <a href="javascript:void(0);" class="pagging__item">...</a>
+                </li>
+                <li>
+                  <a href="javascript:void(0);" class="pagging__item">16</a>
+                </li>
+              </ul>
+              <a href="javascript:void(0);" class="pagging__arrow" style='--icon:url("../img/icons/06.svg")'></a>
+            </nav>
+          </div>
+
+        </div>
+      </section>
+    </main>
+    @@include('html/_footer.htm',{})
+  </div>
+  @@include('html/_js.htm',{})
+</body>
+
+</html>

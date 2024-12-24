@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/_head.htm',{ "title":"HomePage" })
+
+<body>
+  <div class="wrapper">
+    @@include('html/_header-index.htm',{})
+
+    <main class="page page--no-indent">
+
+      <section class="home js-first">
+        <div class='home__container'>
+
+          <div class="home__inner">
+            <div class="home__breadcrumb breadcrumb" style='--linkColor: #bbbbbf; --activeColor: #fff'>
+              <ul class="breadcrumb__list">
+                <li class="breadcrumb__item">
+                  <span><a href="javascript:void(0);"><span>
+                        Главная
+                      </span></a></span>
+                </li>
+                <li class="breadcrumb__item breadcrumb__item--active">
+                  <span>
+                    <span>Работа в СГМК</span>
+                  </span>
+                </li>
+              </ul>
+            </div>
+            <h1 class="home__title _title">
+              Работа в СГМК
+            </h1>
+            <div class="home__text">
+              Наша работа помогает улучшить экономику Кемеровской <br> области, и непрерывно обеспечивать
+              металлургические <br>
+              производства региона и страны необходимым сырьем.
+            </div>
+
+            <a href="javascript:void(0);" class="home__link btn btn--whte">Смотреть вакансии</a>
+          </div>
+          <div class="home__img">
+            <picture>
+              <source media="(max-width: 767px)" srcset="./img/home/06-s@2x.webp 2x">
+              <source media="(max-width: 1360px)" srcset="./img/home/06-m.webp, ./img/home/06-m@2x.webp 2x">
+              <img src="./img/home/06.webp" srcset="./img/home/06@2x.webp 2x" alt="">
+            </picture>
+          </div>
+        </div>
+      </section>
+      @@include('components/work/work.html',{})
+      <section class="vacancy">
+        <div class='vacancy__container'>
+          <div class="vacancy__row">
+            <a href="javascript:void(0);" class="vacancy__column">
+              <div class="vacancy__column-title">Все вакансии</div>
+              <div class="vacancy__column-text">123 вакансии</div>
+            </a>
+            <a href="javascript:void(0);" class="vacancy__column">
+              <div class="vacancy__column-title">Производство</div>
+              <div class="vacancy__column-text">15 вакансий</div>
+            </a>
+            <a href="javascript:void(0);" class="vacancy__column">
+              <div class="vacancy__column-title">Офис</div>
+              <div class="vacancy__column-text">100 вакансий</div>
+            </a>
+            <a href="javascript:void(0);" class="vacancy__column">
+              <div class="vacancy__column-title">IT и digital</div>
+              <div class="vacancy__column-text">8 вакансий</div>
+            </a>
+          </div>
+        </div>
+      </section>
+
+    </main>
+    @@include('html/_popup.htm',{}) @@include('html/_footer.htm',{})
+  </div>
+  @@include('html/_js.htm',{})
+</body>
+
+</html>

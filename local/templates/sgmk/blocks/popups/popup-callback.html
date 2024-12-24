@@ -1,0 +1,47 @@
+<div id="callback-modal" aria-hidden="true" class="popup">
+	<div class="popup__wrapper">
+		<div class="popup__content">
+			<button data-close type="button" class="popup__close" style='--icon:url("../../static/img/icons/19.svg")'></button>
+			<h3 class="popup__title">Оставьте заявку на продукцию</h3>
+			<div class="popup__text">Заполните заявку на заказ продукции и мы свяжемся <br> с вами в ближайшее время</div>
+			<form method="POST" class="popup__form form" data-ajax data-popup-message="#message-modal">
+				<input type="hidden" name="action" value="buy">
+				<input type="hidden" name="productId" value="">
+				<input type="hidden" name="productName" value="">
+				<div class="form__items">
+					<div class="form__item">
+						<div class="form__item-title">ФИО <span>*</span></div>
+						<div class="form__item-input">
+							<input type="text" name="name" data-error="Ошибка" placeholder="Укажите ваше ФИО" class="input" data-validate data-required>
+						</div>
+					</div>
+					<div class="form__item">
+						<div class="form__item-title">Электронная почта <span>*</span></div>
+						<div class="form__item-input">
+							<input type="text" name="email" data-error="Ошибка" placeholder="example@mail.ru" class="input" data-validate data-required="email">
+						</div>
+					</div>
+					<div class="form__item">
+						<div class="form__item-title">Номер телефона<span>*</span></div>
+						<div class="form__item-input">
+							<input type="tel" name="phone" data-error="Ошибка" placeholder="+7 (9xx) xxx-xx-xx" class="input" data-validate data-required="tel">
+						</div>
+					</div>
+					<div class="form__item">
+						<div class="form__item-title">Название компании</div>
+						<div class="form__item-input">
+							<input type="text" name="company" data-error="Ошибка" placeholder="Напишите название вашей компании" class="input" data-validate>
+						</div>
+					</div>
+					<div class="form__item">
+						<div class="form__item-title">Комментарий</div>
+						<div class="form__item-textarea">
+							<textarea class="input" name="comment" placeholder="Напишите, какая продукция вас заинтересовала, в каком объёме" data-validate></textarea>
+						</div>
+					</div>
+				</div>
+				<button type="submit" class="form__btn btn">Отправить заявку</button>
+			</form>
+		</div>
+	</div>
+</div>

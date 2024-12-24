@@ -1,0 +1,27 @@
+@font-face {
+  font-family: manrope;
+  font-display: swap;
+  src:
+    url("../fonts/manrope-400.woff2") format("woff2"),
+    url("../fonts/manrope-400.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: manrope;
+  font-display: swap;
+  src:
+    url("../fonts/manrope-500.woff2") format("woff2"),
+    url("../fonts/manrope-500.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: heliosext;
+  font-display: swap;
+  src:
+    url("../fonts/heliosext-400.woff2") format("woff2"),
+    url("../fonts/heliosext-400.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}

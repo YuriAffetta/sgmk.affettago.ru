@@ -1,0 +1,184 @@
+.bumph {
+  padding-bottom: rem(100);
+
+  @media (max-width: $tablet) {
+    padding-bottom: rem(80);
+  }
+
+  @media (max-width: $mobile) {
+    padding-bottom: rem(83);
+  }
+  // .bumph__container
+
+  &__container {
+    // --pad: 40px;
+
+    // @media (max-width: $tablet) {
+    //   --pad: 20px;
+    // }
+    // @media (max-width: $mobile) {
+    //   --pad: 16px;
+    // }
+  }
+
+  // .bumph__title
+
+  &__title {
+    font-family: $fontSecondary;
+    font-size: rem(32);
+    line-height: 110%; /* 35.2px */
+    letter-spacing: -0.96px;
+    text-transform: uppercase;
+    margin-bottom: rem(32);
+
+    @media (max-width: $tablet) {
+      font-size: rem(28);
+      line-height: 130%; /* 36.4px */
+      letter-spacing: -0.84px;
+
+      margin-bottom: rem(24);
+    }
+
+    @media (max-width: $mobile) {
+      font-size: rem(18);
+      line-height: 130%; /* 23.4px */
+      letter-spacing: -0.54px;
+      margin-bottom: rem(20);
+    }
+  }
+
+  // .bumph__row
+
+  &__row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: rem(24);
+
+    @media (max-width: $tablet) {
+      grid-template-columns: repeat(1, 1fr);
+      gap: rem(25);
+    }
+
+    @media (max-width: $mobile) {
+      gap: rem(20);
+    }
+  }
+
+  // .bumph__column
+
+  &__column {
+    display: flex;
+    flex-direction: column;
+
+    @media (max-width: $tablet) {
+      flex-direction: row;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: rem(30);
+    }
+
+    @media (max-width: $mobile) {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: rem(14);
+    }
+
+    @media (any-hover: hover) {
+      &:hover {
+        .bumph__column-text {
+          color: cl(yllow);
+        }
+      }
+    }
+  }
+
+  // .bumph__column-content
+
+  &__column-content {
+    @media (min-width: $tablet) {
+      flex: 1 1 auto;
+      margin-bottom: rem(24);
+    }
+  }
+
+  // .bumph__column-date
+
+  &__column-date {
+    color: cl(gry);
+
+    font-size: rem(16);
+    line-height: 140%; /* 22.4px */
+    letter-spacing: -0.08px;
+    margin-bottom: rem(11);
+    display: inline-flex;
+
+    @media (max-width: $tablet) {
+      font-size: rem(14);
+      letter-spacing: -0.07px;
+    }
+
+    @media (max-width: $mobile) {
+      font-size: rem(13);
+      letter-spacing: -0.065px;
+      margin-bottom: rem(4);
+    }
+  }
+
+  // .bumph__column-text
+
+  &__column-text {
+    font-size: rem(18);
+    line-height: 140%; /* 25.2px */
+    letter-spacing: -0.09px;
+
+    transition: all $time $tr 0s;
+
+    @media (max-width: $mobile) {
+      font-size: rem(14);
+      letter-spacing: -0.07px;
+    }
+  }
+
+  // .bumph__column-link
+
+  &__column-link {
+    display: flex;
+    align-items: center;
+    gap: rem(8);
+
+    color: cl(alt);
+
+    font-size: rem(16);
+    line-height: 140%; /* 22.4px */
+    letter-spacing: -0.08px;
+
+    @media (max-width: $tablet) {
+      font-size: rem(14);
+      letter-spacing: -0.07px;
+      margin-bottom: rem(2);
+    }
+
+    @media (max-width: $mobile) {
+      font-size: rem(13);
+      letter-spacing: -0.065px;
+      gap: rem(4);
+      margin-bottom: rem(0);
+    }
+
+    &::before {
+      content: "";
+      mask: var(--icon) center center/contain no-repeat;
+      -webkit-mask: var(--icon) center center/contain no-repeat;
+      background: cl(alt);
+      --size: 20px;
+
+      width: var(--size);
+      height: var(--size);
+      flex: 0 0 var(--size);
+
+      @media (max-width: $mobile) {
+        --size: 16px;
+      }
+    }
+  }
+}

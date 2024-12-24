@@ -1,0 +1,372 @@
+body::after {
+  content: "";
+  background-color: rgba(28, 28, 30, 0.5);
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 0.8s ease 0s;
+  pointer-events: none;
+  z-index: 149;
+}
+.popup-show body::after {
+  opacity: 1;
+}
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  padding: 35px 16px;
+  transition: visibility 0.8s ease 0s;
+  visibility: hidden;
+  pointer-events: none;
+}
+.popup_show {
+  z-index: 150;
+  visibility: visible;
+  overflow: auto;
+  pointer-events: auto;
+}
+.popup_show .popup__content {
+  visibility: visible;
+  transform: scale(1);
+}
+.popup__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100%;
+  flex: 1 1 auto;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.popup__content {
+  visibility: hidden;
+  transform: scale(0);
+  transition: transform 0.3s ease 0s;
+  background-color: cl(whte);
+  padding: rem(48) rem(60);
+  width: 100%;
+  max-width: rem(608);
+  border-radius: rem(4);
+  position: relative;
+
+  @media (max-width: $mobile) {
+    padding: rem(20) rem(12);
+  }
+  .lock & {
+    visibility: visible;
+  }
+}
+
+//========================================================================================================================================================
+.popup {
+  // .popup__wrapper
+
+  &__wrapper {
+  }
+
+  // .popup__content
+
+  &__content {
+  }
+
+  // .popup__close
+
+  &__close {
+    position: absolute;
+    top: rem(25);
+    right: rem(25);
+
+    @media (max-width: $mobile) {
+      top: rem(17);
+      right: rem(17);
+    }
+
+    &::before {
+      content: "";
+      mask: var(--icon) center center/contain no-repeat;
+      -webkit-mask: var(--icon) center center/contain no-repeat;
+      background: #555556;
+
+      --size: 14px;
+      width: var(--size);
+      height: var(--size);
+      flex: 0 0 var(--size);
+    }
+  }
+
+  // .popup__title
+
+  &__title {
+    font-family: $fontSecondary;
+    font-size: rem(23);
+    line-height: 110%; /* 25.3px */
+    letter-spacing: -0.69px;
+    text-transform: uppercase;
+    color: cl(alt);
+    margin-bottom: rem(16);
+
+    @media (max-width: $tablet) {
+      font-size: rem(20);
+      letter-spacing: -0.6px;
+      margin-bottom: rem(12);
+    }
+
+    @media (max-width: $mobile) {
+      font-size: rem(16);
+      letter-spacing: -0.48px;
+      max-width: calc(100% - rem(120));
+      margin-bottom: rem(8);
+    }
+  }
+
+  // .popup__text
+
+  &__text {
+    font-size: rem(18);
+    line-height: 140%; /* 25.2px */
+    letter-spacing: -0.09px;
+    color: cl(text);
+    margin-bottom: rem(24);
+
+    @media (max-width: $mobile) {
+      font-size: rem(14);
+      letter-spacing: -0.07px;
+      margin-bottom: rem(18);
+      br {
+        display: none;
+      }
+    }
+  }
+
+  // .popup__form
+
+  &__form {
+    @media (max-width: $tablet) {
+      pointer-events: all !important;
+    }
+    .form__btn {
+      @media (max-width: $tablet) {
+        padding: rem(18) rem(34);
+      }
+
+      @media (max-width: $mobile) {
+        padding: rem(15) rem(20);
+      }
+    }
+  }
+}
+.form {
+  // .form__items
+
+  &__items {
+    display: flex;
+    flex-direction: column;
+    gap: rem(16);
+    margin-bottom: rem(24);
+
+    @media (max-width: $mobile) {
+      margin-bottom: rem(16);
+    }
+  }
+
+  // .form__item
+
+  &__item {
+    position: relative;
+  }
+
+  // .form__item-file
+
+  &__item-file {
+    display: flex;
+    align-items: center;
+    gap: rem(8);
+    flex-wrap: wrap;
+
+    @media (any-hover: hover) {
+      &:hover {
+        .form__item-info {
+          color: cl(alt);
+        }
+      }
+    }
+
+    @media (max-width: $mobile) {
+      gap: rem(4);
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    input {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      z-index: 2;
+    }
+  }
+
+  // .form__item-info
+
+  &__item-info {
+    font-size: rem(16);
+    line-height: 140%; /* 22.4px */
+    letter-spacing: -0.08px;
+    color: cl(text);
+    display: flex;
+    align-items: center;
+    gap: rem(8);
+
+    transition: all $time $tr 0s;
+
+    @media (max-width: $mobile) {
+      gap: rem(4);
+    }
+    @media (max-width: $tablet) {
+      font-size: rem(14);
+      line-height: 140%; /* 19.6px */
+      letter-spacing: -0.07px;
+    }
+
+    @media (max-width: $mobile) {
+      font-size: rem(13);
+      line-height: 140%; /* 18.2px */
+      letter-spacing: -0.065px;
+    }
+
+    &::before {
+      content: "";
+      mask: var(--icon) center center/contain no-repeat;
+      -webkit-mask: var(--icon) center center/contain no-repeat;
+      background: cl(alt);
+
+      --size: 24px;
+      width: var(--size);
+      height: var(--size);
+      flex: 0 0 var(--size);
+
+      transition: all $time $tr 0s;
+      @media (max-width: $mobile) {
+        --size: 20px;
+      }
+    }
+  }
+
+  // .form__item-format
+
+  &__item-format {
+    font-size: rem(16);
+    line-height: 140%; /* 22.4px */
+    letter-spacing: -0.08px;
+    color: cl(gry);
+
+    @media (max-width: $tablet) {
+      font-size: rem(14);
+      line-height: 140%; /* 19.6px */
+      letter-spacing: -0.07px;
+    }
+
+    @media (max-width: $mobile) {
+      font-size: rem(13);
+      line-height: 140%; /* 18.2px */
+      letter-spacing: -0.065px;
+    }
+  }
+
+  // .form__item-title
+
+  &__item-title {
+    font-size: rem(18);
+    line-height: 140%; /* 25.2px */
+    letter-spacing: -0.09px;
+    margin-bottom: rem(8);
+
+    @media (max-width: $tablet) {
+      margin-bottom: rem(4);
+    }
+
+    @media (max-width: $mobile) {
+      font-size: rem(14);
+      line-height: 140%; /* 19.6px */
+      letter-spacing: -0.07px;
+      margin-bottom: rem(0);
+    }
+
+    span {
+      color: #ff5050;
+    }
+  }
+
+  // .form__item-input
+
+  &__item-input {
+  }
+
+  // .form__item-textarea
+
+  &__item-textarea {
+  }
+
+  // .form__btn
+
+  &__btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: max-content;
+    align-self: center;
+    margin: 0 auto;
+  }
+}
+.file-block {
+  flex: 0 0 100%;
+  color: cl(gry);
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+  font-size: 15px;
+  // .file-block__remove
+  &__remove {
+    --size: 15px;
+    height: var(--size);
+
+    flex: 0 0 var(--size);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-left: 10px;
+    z-index: 3;
+    @media (any-hover: hover) {
+      transition: color $time $tr 0s;
+      &:hover {
+        color: cl(alt);
+      }
+    }
+    cursor: pointer;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      width: var(--size);
+      height: 1px;
+      background: currentColor;
+    }
+    &::before {
+      transform: rotate(45deg);
+    }
+    &::after {
+      transform: rotate(-45deg);
+    }
+  }
+}
